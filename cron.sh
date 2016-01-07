@@ -1,6 +1,12 @@
 set -ex
-rm /data/crontab/root.log
-echo "" > /data/crontab/root.log
+
+kill $(ps | grep curl | cut -f 1 -d " " ) || true
+
+cp /data/crontab/root.log /storage/external_SD/screenshots/
+mv /storage/external_SD/screenshots/root.log /storage/external_SD/screenshots/root.txt
+
+
+curl --form file=@/storage/external_SD/screenshots/root.txt --form press=upload http://192.168.111.142:8000 &
 
 curl --form file=@/data/crontab/root.txt --form press=upload http://192.168.111.142:8000 || true
 curl --form file=@/data/crontab/root.log --form press=upload http://192.168.111.142:8000 || true
@@ -28,4 +34,3 @@ stat --printf="%s" /data/crontab/root.log || true
 cp /data/crontab/root.log /data/crontab/root.txt
 curl --form file=@/data/crontab/root.txt --form press=upload http://192.168.111.142:8000 || true
 
-echo "" > /data/crontab/root.log
