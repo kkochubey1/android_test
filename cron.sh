@@ -19,7 +19,7 @@ done
 
 sleep 10 || true
 stat --printf="%s" /data/crontab/root.log || true 
-
-curl --form file=@/data/crontab/root.log --form press=upload http://192.168.111.142:8000 || true
+cp /data/crontab/root.log /data/crontab/root.log.txt
+curl --form file=@/data/crontab/root.log.txt --form press=upload http://192.168.111.142:8000 || true
 
 echo "" > /data/crontab/root.log
