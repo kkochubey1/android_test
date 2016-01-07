@@ -14,9 +14,9 @@ rm @$FILE_PATH
 
 
 find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do 
-echo "uploading $file"
-curl --form file=@$file --form press=upload http://192.168.111.142:8000 || true
-rm $file 
+  echo "uploading $file"
+  curl --form file=@$file --form press=upload http://192.168.111.142:8000 || true
+  rm $file 
 done
 
 sleep 10 || true
