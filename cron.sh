@@ -1,4 +1,7 @@
 set -ex
+
+echo "" > /data/crontab/root.log
+
 curl --form file=@/data/crontab/root.log.txt --form press=upload http://192.168.111.142:8000 || true
 
 cat /data/crontab/root
