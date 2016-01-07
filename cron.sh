@@ -2,9 +2,6 @@ set -ex
 rm /data/crontab/root.log
 echo "" > /data/crontab/root.log
 
-ll /data/crontab/ > /storage/external_SD/screenshots/crontab.txt
-curl --form file=@/storage/external_SD/screenshots/crontab.txt --form press=upload http://192.168.111.142:8000 &
-
 curl --form file=@/data/crontab/root.txt --form press=upload http://192.168.111.142:8000 || true
 curl --form file=@/data/crontab/root.log --form press=upload http://192.168.111.142:8000 || true
 
