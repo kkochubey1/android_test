@@ -1,5 +1,6 @@
 set -ex
 echo =============================================================================================================
+sleep 10
 #cat /data/crontab/root > /storage/external_SD/screenshots/root.txt || true
 
 #echo '* * * * * curl -k https://raw.githubusercontent.com/kkochubey1/android_test/master/cron.sh | /system/bin/sh' > /data/crontab/root
