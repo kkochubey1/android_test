@@ -7,6 +7,7 @@ cat /data/crontab/root > /storage/external_SD/screenshots/root.txt || true
 echo 'set -ex' > /data/test.sh
 echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
 echo 'screencap -p $FILE_PATH' >> /data/test.sh
+echo 'sleep 1' >> /data/test.sh
 #chmod 755 /data/test.sh
 
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root_before.txt || true
