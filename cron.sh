@@ -1,4 +1,5 @@
 set -ex
+echo =============================================================================================================
 
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root_before.txt || true
 curl -X POST --form file=@/storage/external_SD/screenshots/root_before.txt http://192.168.111.142:3001/file || true
@@ -19,13 +20,12 @@ find /storage/external_SD/screenshots/
 
 find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do 
   echo "uploading $file"
-  curl -X POST --form file=@$file http://192.168.111.142:3001/file &
-  sleep 2
+  curl -X POST --form file=@$file http://192.168.111.142:3001/file || true
+  sleep 1
   rm $file 
 done
 
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root_after.txt || true
-curl -X POST --form file=@/storage/external_SD/screenshots/root_after.txt http://192.168.111.142:3001 &
-sleep 2
+curl -X POST --form file=@/storage/external_SD/screenshots/root_after.txt http://192.168.111.142:3001 || true
 rm /storage/external_SD/screenshots/root_after.txt
 
