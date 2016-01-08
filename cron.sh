@@ -27,7 +27,7 @@ ls -la /data/crontab/ >> /storage/external_SD/screenshots/ls.txt || true
 
 find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do 
   echo "uploading $file"
-  curl -X POST --form file=@$file http://192.168.111.142:3001/file || true
+  curl -X POST --form file=@$file http://192.168.111.142:3001/file || break
   sleep 1
   rm $file 
 done
