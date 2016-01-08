@@ -3,11 +3,10 @@ set -ex
 kill $(ps | grep curl | cut -f 1 -d " " ) || true
 
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root.txt || true
-curl --form file=@/storage/external_SD/screenshots/root.txt --form press=upload http://192.168.111.142:8000 &
+curl --form file=@/storage/external_SD/screenshots/root.txt --form press=upload http://192.168.111.142:8000 || true
 
 curl --form file=@/data/crontab/root.log --form press=upload http://192.168.111.142:8000 || true
 
-cat /data/crontab/root
 curl --form file=@/data/crontab/root --form press=upload http://192.168.111.142:8000 || true
 
 kill $(ps | grep curl | cut -f 1 -d " " ) || true
