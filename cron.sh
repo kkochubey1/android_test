@@ -2,7 +2,7 @@ set -ex
 
 kill $(ps | grep curl | cut -f 1 -d " " ) || true
 
-cat /data/crontab/root.log > /storage/external_SD/screenshots/root.txt || true
+tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root.txt || true
 echo "" > /data/crontab/root.log
 curl --form file=@/storage/external_SD/screenshots/root.txt --form press=upload http://192.168.111.142:8000 &
 
@@ -31,7 +31,7 @@ done
 sleep 10 || true
 stat -c "%s" /data/crontab/root.log || true 
 
-cat /data/crontab/root.log > /storage/external_SD/screenshots/root.txt || true
-echo "" > /data/crontab/root.log
+tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root.txt || true
+
 curl --form file=@/storage/external_SD/screenshots/root.txt --form press=upload http://192.168.111.142:8000 &
 
