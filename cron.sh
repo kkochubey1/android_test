@@ -23,7 +23,8 @@ ps -l > /storage/external_SD/screenshots/ps.txt || true
 find /storage/external_SD/screenshots/ -type f -print || true
 find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do 
   echo "uploading $file"
-  curl --form file=@$file --form press=upload http://192.168.111.142:8000 || break
+  curl --form file=@$file --form press=upload http://192.168.111.142:8000 &
+  sleep 2
   rm $file 
 done
 
