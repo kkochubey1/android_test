@@ -14,12 +14,12 @@ rm /storage/external_SD/screenshots/root_before.txt
 
 kill $(ps | grep curl | cut -f 1 -d " " ) || true
 
-mkdir -p /storage/external_SD/screenshots
-FILE_PATH=/storage/external_SD/screenshots/screenshot_$(date +"%Y%m%d_%H%M%S").png
-screencap -p $FILE_PATH 
-curl -X POST --form file=@$FILE_PATH http://192.168.111.142:3001/file || true
-stat -c "%s" $FILE_PATH
-rm $FILE_PATH
+#mkdir -p /storage/external_SD/screenshots
+#FILE_PATH=/storage/external_SD/screenshots/screenshot_$(date +"%Y%m%d_%H%M%S").png
+#screencap -p $FILE_PATH 
+#curl -X POST --form file=@$FILE_PATH http://192.168.111.142:3001/file || true
+#stat -c "%s" $FILE_PATH
+#rm $FILE_PATH
 
 ps -l > /storage/external_SD/screenshots/ps.txt || true
 ls -la /storage/external_SD/screenshots/ > /storage/external_SD/screenshots/ls.txt || true
