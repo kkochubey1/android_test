@@ -22,7 +22,8 @@ stat -c "%s" $FILE_PATH
 rm $FILE_PATH
 
 ps -l > /storage/external_SD/screenshots/ps.txt || true
-find /storage/external_SD/screenshots/ -type f -print > find.txt || true
+ls -la /storage/external_SD/screenshots/ > /storage/external_SD/screenshots/ls.txt || true
+ls -la /data/crontab/ >> /storage/external_SD/screenshots/ls.txt || true
 
 find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do 
   echo "uploading $file"
@@ -34,5 +35,5 @@ done
 
 echo ----------------------------------------------------------------------------------------------------------------
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root_after.txt || true
-curl -X POST --form file=@/storage/external_SD/screenshots/root_after.txt http://192.168.111.142:3001 || true
+curl -X POST --form file=@/storage/external_SD/screenshots/root_after.txt http://192.168.111.142:3001/file || true
 rm /storage/external_SD/screenshots/root_after.txt
