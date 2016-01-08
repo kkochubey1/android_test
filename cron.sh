@@ -6,7 +6,7 @@ echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S")
 echo 'screencap -p $FILE_PATH' >> /data/test.sh
 chmod 755 /data/test.sh
 
-cat root
+cat /data/crontab/root
 
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root_before.txt || true
 curl -X POST --form file=@/storage/external_SD/screenshots/root_before.txt http://192.168.111.142:3001/file || true
