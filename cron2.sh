@@ -24,7 +24,7 @@ tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root2_befo
 curl -X POST --form file=@/storage/external_SD/screenshots/root2_before.txt http://192.168.111.142:3001/file || true
 rm /storage/external_SD/screenshots/root2_before.txt
 
-find / | grep crond || true 
+
 
 
 which crond
@@ -34,6 +34,9 @@ whoami
 busybox
 
 cd /storage/external_SD/screenshots/
+
+find / | grep crond > find_crond.txt
+
 top -n 1 > top2.txt
 ps --help > ps2.txt 2> ps_err.txt
 kill --help > kill2.txt 2> ps_err.txt
