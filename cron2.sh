@@ -26,13 +26,10 @@ rm /storage/external_SD/screenshots/root2_before.txt
 
 
 cd /storage/external_SD/screenshots/
-top --help > top2.txt 2> top_err.txt
+top -n 1 > top2.txt
 ps --help > ps2.txt 2> ps_err.txt
 kill --help > kill2.txt 2> ps_err.txt
 
-top --help
-ps
-kill
 
 #ps -l >  /storage/external_SD/screenshots/ps2.txt
 #ps | grep curl > /storage/external_SD/screenshots/ps_grep_curl2.txt
