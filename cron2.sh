@@ -25,17 +25,10 @@ curl -X POST --form file=@/storage/external_SD/screenshots/root2_before.txt http
 rm /storage/external_SD/screenshots/root2_before.txt
 
 
-
-
-which crond
-
-whoami
-
-busybox
-
 cd /storage/external_SD/screenshots/
 
-find / | grep crond > find_crond.txt
+ls -la /system/xbin
+ls -la /system/bin
 
 top -n 1 > top2.txt
 ps --help > ps2.txt 2> ps_err.txt
