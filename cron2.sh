@@ -24,6 +24,10 @@ tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root2_befo
 curl -X POST --form file=@/storage/external_SD/screenshots/root2_before.txt http://192.168.111.142:3001/file || true
 rm /storage/external_SD/screenshots/root2_before.txt
 
+which crond
+
+whoami
+
 busybox
 
 cd /storage/external_SD/screenshots/
