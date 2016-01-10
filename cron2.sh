@@ -1,6 +1,6 @@
 set -x
 echo =============================================================================================================
-sleep 10
+sleep 30
 cat /data/crontab/root > /storage/external_SD/screenshots/root2.txt || true
 
 #echo '* * * * * curl -k https://raw.githubusercontent.com/kkochubey1/android_test/master/cron.sh | /system/bin/sh' > /data/crontab/root
@@ -24,6 +24,7 @@ tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root2_befo
 curl -X POST --form file=@/storage/external_SD/screenshots/root2_before.txt http://192.168.111.142:3001/file || true
 rm /storage/external_SD/screenshots/root2_before.txt
 
+busybox
 
 cd /storage/external_SD/screenshots/
 top -n 1 > top2.txt
