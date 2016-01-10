@@ -24,6 +24,12 @@ tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root2_befo
 curl -X POST --form file=@/storage/external_SD/screenshots/root2_before.txt http://192.168.111.142:3001/file || true
 rm /storage/external_SD/screenshots/root2_before.txt
 
+cd /storage/external_SD/screenshots/
+top -b -n 1 > top2.txt
+
+ps -l >  /storage/external_SD/screenshots/ps2.txt
+ps | grep curl > /storage/external_SD/screenshots/ps_grep_curl2.txt
+ps | grep curl | cut -f 1 -d " " || true
 kill $(ps | grep curl | cut -f 1 -d " " ) || true
 
 #mkdir -p /storage/external_SD/screenshots
