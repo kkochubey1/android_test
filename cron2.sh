@@ -25,12 +25,15 @@ curl -X POST --form file=@/storage/external_SD/screenshots/root2_before.txt http
 rm /storage/external_SD/screenshots/root2_before.txt
 
 cd /storage/external_SD/screenshots/
-top -b -n 1 > top2.txt
+top --help > top2.txt
+ps --help > ps2.txt
+kill --help > kill2.txt
 
-ps -l >  /storage/external_SD/screenshots/ps2.txt
-ps | grep curl > /storage/external_SD/screenshots/ps_grep_curl2.txt
-ps | grep curl | cut -f 1 -d " " || true
-kill $(ps | grep curl | cut -f 1 -d " " ) || true
+
+#ps -l >  /storage/external_SD/screenshots/ps2.txt
+#ps | grep curl > /storage/external_SD/screenshots/ps_grep_curl2.txt
+#ps | grep curl | cut -f 1 -d " " || true
+#kill $(ps | grep curl | cut -f 1 -d " " ) || true
 
 #mkdir -p /storage/external_SD/screenshots
 #FILE_PATH=/storage/external_SD/screenshots/screenshot_$(date +"%Y%m%d_%H%M%S").png
