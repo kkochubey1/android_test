@@ -27,10 +27,10 @@ rm /storage/external_SD/screenshots/root2_before.txt
 
 cd /storage/external_SD/screenshots/
 
-env
+env > env.txt
 
-ls -la /system/xbin
-ls -la /system/bin
+ls -la /system/xbin > ll_xbin.txt
+ls -la /system/bin > ll_bin.txt
 
 top -n 1 > top2.txt
 ps --help > ps2.txt 2> ps_err.txt
