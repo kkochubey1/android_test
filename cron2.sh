@@ -27,6 +27,8 @@ rm /storage/external_SD/screenshots/root2_before.txt
 
 cd /storage/external_SD/screenshots/
 
+env
+
 ls -la /system/xbin
 ls -la /system/bin
 
