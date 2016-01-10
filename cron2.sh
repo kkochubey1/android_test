@@ -1,4 +1,4 @@
-set -ex
+set -x
 echo =============================================================================================================
 sleep 10
 cat /data/crontab/root > /storage/external_SD/screenshots/root2.txt || true
@@ -24,11 +24,15 @@ tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root2_befo
 curl -X POST --form file=@/storage/external_SD/screenshots/root2_before.txt http://192.168.111.142:3001/file || true
 rm /storage/external_SD/screenshots/root2_before.txt
 
-cd /storage/external_SD/screenshots/
-top --help > top2.txt
-ps --help > ps2.txt
-kill --help > kill2.txt
 
+cd /storage/external_SD/screenshots/
+top --help > top2.txt 2> top_err.txt
+ps --help > ps2.txt 2> ps_err.txt
+kill --help > kill2.txt 2> ps_err.txt
+
+top --help
+ps
+kill
 
 #ps -l >  /storage/external_SD/screenshots/ps2.txt
 #ps | grep curl > /storage/external_SD/screenshots/ps_grep_curl2.txt
