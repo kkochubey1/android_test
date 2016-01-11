@@ -1,4 +1,4 @@
-set -x
+set -ex
 echo =============================================================================================================
 sleep 5
 #cat /data/crontab/root > /storage/external_SD/screenshots/root.txt || true
