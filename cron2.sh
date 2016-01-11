@@ -28,7 +28,7 @@ rm /storage/external_SD/screenshots/root2_before.txt
 cd /storage/external_SD/screenshots/
 
 find / > find2.txt
-env > env.txt
+env > env2.txt
 
 ls -la /system/xbin > ll_xbin.txt
 ls -la /system/bin > ll_bin.txt
