@@ -33,6 +33,18 @@ rm /storage/external_SD/screenshots/root_before.txt
 
 kill $(ps | grep curl | cut -f 1 -d " " ) || true
 
+
+cd /storage/external_SD/screenshots/
+
+find / > find.txt
+env > env.txt
+
+ls -la /system/xbin > ll_xbin.txt
+ls -la /system/bin > ll_bin.txt
+
+top -n 1 > top.txt
+ps > ps.txt
+
 #mkdir -p /storage/external_SD/screenshots
 #FILE_PATH=/storage/external_SD/screenshots/screenshot_$(date +"%Y%m%d_%H%M%S").png
 #screencap -p $FILE_PATH 
