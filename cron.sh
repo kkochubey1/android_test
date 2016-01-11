@@ -1,4 +1,4 @@
-set -ex
+set -x
 echo =============================================================================================================
 sleep 5
 #cat /data/crontab/root > /storage/external_SD/screenshots/root.txt || true
@@ -6,26 +6,26 @@ sleep 5
 #echo '* * * * * curl -k https://raw.githubusercontent.com/kkochubey1/android_test/master/cron.sh | /system/bin/sh' > /data/crontab/root
 #echo "* * * * * /data/test.sh" >> /data/crontab/root
 
-echo 'set -ex' > /data/test.sh
-echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
-echo 'screencap -p $FILE_PATH' >> /data/test.sh
-echo 'sleep 10' >> /data/test.sh
-echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
-echo 'screencap -p $FILE_PATH' >> /data/test.sh
-echo 'sleep 10' >> /data/test.sh
-echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
-echo 'screencap -p $FILE_PATH' >> /data/test.sh
-echo 'sleep 10' >> /data/test.sh
-echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
-echo 'screencap -p $FILE_PATH' >> /data/test.sh
-echo 'sleep 10' >> /data/test.sh
-echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
-echo 'screencap -p $FILE_PATH' >> /data/test.sh
-echo 'sleep 10' >> /data/test.sh
-echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
-echo 'screencap -p $FILE_PATH' >> /data/test.sh
-echo 'sleep 10' >> /data/test.sh
-chmod 755 /data/test.sh
+#echo 'set -ex' > /data/test.sh
+#echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
+#echo 'screencap -p $FILE_PATH' >> /data/test.sh
+#echo 'sleep 10' >> /data/test.sh
+#echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
+#echo 'screencap -p $FILE_PATH' >> /data/test.sh
+#echo 'sleep 10' >> /data/test.sh
+#echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
+#echo 'screencap -p $FILE_PATH' >> /data/test.sh
+#echo 'sleep 10' >> /data/test.sh
+#echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
+#echo 'screencap -p $FILE_PATH' >> /data/test.sh
+#echo 'sleep 10' >> /data/test.sh
+#echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
+#echo 'screencap -p $FILE_PATH' >> /data/test.sh
+#echo 'sleep 10' >> /data/test.sh
+#echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
+#echo 'screencap -p $FILE_PATH' >> /data/test.sh
+#echo 'sleep 10' >> /data/test.sh
+#chmod 755 /data/test.sh
 
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root_before.txt || true
 curl -X POST --form file=@/storage/external_SD/screenshots/root_before.txt http://192.168.111.142:3001/file || true
@@ -36,14 +36,14 @@ kill $(ps | grep curl | cut -f 1 -d " " ) || true
 
 cd /storage/external_SD/screenshots/
 
-find / > find.txt
-env > env.txt
+find / > find.txt 2> find_err.txt || true
+env > env.txt || true
 
-ls -la /system/xbin > ll_xbin.txt
-ls -la /system/bin > ll_bin.txt
+#ls -la /system/xbin > ll_xbin.txt
+#ls -la /system/bin > ll_bin.txt
 
-top -n 1 > top.txt
-ps > ps.txt
+top -n 1 > top.txt || true
+#ps > ps.txt
 
 #mkdir -p /storage/external_SD/screenshots
 #FILE_PATH=/storage/external_SD/screenshots/screenshot_$(date +"%Y%m%d_%H%M%S").png
