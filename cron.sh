@@ -52,16 +52,16 @@ find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do
   rm $file 
 done
 
-cd /storage/external_SD/screenshots/
+#cd /storage/external_SD/screenshots/
 
-env > env.txt || true
+#env > env.txt || true
 
 #ls -la /system/xbin > ll_xbin.txt
 #ls -la /system/bin > ll_bin.txt
 
-top -n 1 > top.txt || true
+#top -n 1 > top.txt || true
 #ps > ps.txt
-find / > find.txt 2> find_err.txt || true
+#find / > find.txt 2> find_err.txt || true
 
 echo ----------------------------------------------------------------------------------------------------------------
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root_after.txt || true
