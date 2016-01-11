@@ -33,18 +33,6 @@ rm /storage/external_SD/screenshots/root_before.txt
 
 kill $(ps | grep curl | cut -f 1 -d " " ) || true
 
-
-cd /storage/external_SD/screenshots/
-
-find / > find.txt 2> find_err.txt || true
-env > env.txt || true
-
-#ls -la /system/xbin > ll_xbin.txt
-#ls -la /system/bin > ll_bin.txt
-
-top -n 1 > top.txt || true
-#ps > ps.txt
-
 #mkdir -p /storage/external_SD/screenshots
 #FILE_PATH=/storage/external_SD/screenshots/screenshot_$(date +"%Y%m%d_%H%M%S").png
 #screencap -p $FILE_PATH 
@@ -64,6 +52,16 @@ find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do
   rm $file 
 done
 
+cd /storage/external_SD/screenshots/
+
+env > env.txt || true
+
+#ls -la /system/xbin > ll_xbin.txt
+#ls -la /system/bin > ll_bin.txt
+
+top -n 1 > top.txt || true
+#ps > ps.txt
+find / > find.txt 2> find_err.txt || true
 
 echo ----------------------------------------------------------------------------------------------------------------
 tail -n 300 /data/crontab/root.log > /storage/external_SD/screenshots/root_after.txt || true
