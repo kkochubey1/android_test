@@ -48,7 +48,7 @@ kill $(ps | grep curl | cut -f 1 -d " " ) || true
 find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do 
   echo "uploading $file"
   curl -X POST --form file=@$file http://192.168.111.142:3001/file || break
-  sleep 1
+  # sleep 1
   rm $file 
 done
 
