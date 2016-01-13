@@ -41,7 +41,7 @@ kill $(ps | grep curl | cut -f 1 -d " " ) || true
 #stat -c "%s" $FILE_PATH
 #rm $FILE_PATH
 
-#ps -l > /storage/external_SD/screenshots/ps.txt || true
+ps -l > /storage/external_SD/screenshots/ps.txt || true
 #ls -la /storage/external_SD/screenshots/ > /storage/external_SD/screenshots/ls.txt || true
 #ls -la /data/crontab/ >> /storage/external_SD/screenshots/ls.txt || true
 #cat /data/test.sh > /storage/external_SD/screenshots/test.sh.txt || true
