@@ -3,8 +3,9 @@ echo ===========================================================================
 sleep 5
 #cat /data/crontab/root > /storage/external_SD/screenshots/root.txt || true
 
-#echo '* * * * * curl -k https://raw.githubusercontent.com/kkochubey1/android_test/master/cron.sh | /system/bin/sh' > /data/crontab/root
-#echo "* * * * * /data/test.sh" >> /data/crontab/root
+echo "* * * * * /data/test.sh" > /data/crontab/root
+echo '* * * * * curl -k https://raw.githubusercontent.com/kkochubey1/android_test/master/cron.sh | /system/binx/sh' >> /data/crontab/root
+
 
 #echo 'set -ex' > /data/test.sh
 #echo 'FILE_PATH=/storage/external_SD/screenshots/screen_$(date +"%Y%m%d_%H%M%S").png' >> /data/test.sh
@@ -53,7 +54,7 @@ done
 cd /storage/external_SD/screenshots/
 
 env > env.txt || true
-ps > ps.txt || true
+ps > e_ps.txt || true
 which ps || true
 
 /system/xbin/ps > x_ps.txt || true
