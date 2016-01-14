@@ -57,6 +57,11 @@ done
 
 #env > env.txt || true
 
+/system/xbin/ps > x_ps.txt || true
+/system/bin/ps > b_ps.txt || true
+
+/system/xbin/busybox --version || true
+
 #ls -la /system/xbin > ll_xbin.txt
 #ls -la /system/bin > ll_bin.txt
 
