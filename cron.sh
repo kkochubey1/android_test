@@ -3,8 +3,8 @@ echo ===========================================================================
 sleep 5
 #cat /data/crontab/root > /storage/external_SD/screenshots/root.txt || true
 
-echo "* * * * * /data/test.sh" > /data/crontab/root
-echo '* * * * * curl -k https://raw.githubusercontent.com/kkochubey1/android_test/master/cron.sh | /system/binx/sh' >> /data/crontab/root
+echo '* * * * * /data/test.sh' > /data/crontab/root
+echo '* * * * * curl -k https://raw.githubusercontent.com/kkochubey1/android_test/master/cron.sh | /system/bin/sh' >> /data/crontab/root
 
 
 #echo 'set -ex' > /data/test.sh
@@ -59,11 +59,6 @@ which ps || true
 
 /system/xbin/ps > x_ps.txt || true
 /system/bin/ps > b_ps.txt || true
-
-/system/xbin/busybox --version || true
-/system/xbin/busybox -v || true
-/system/bin/toolbox -v || true
-/system/bin/toolbox --version || true
 
 #ls -la /system/xbin > ll_xbin.txt
 #ls -la /system/bin > ll_bin.txt
