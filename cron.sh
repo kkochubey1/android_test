@@ -41,9 +41,6 @@ kill $(ps | grep curl | cut -f 1 -d " " ) || true
 #stat -c "%s" $FILE_PATH
 #rm $FILE_PATH
 
-ps -l > /storage/external_SD/screenshots/ps.txt || true
-#ls -la /storage/external_SD/screenshots/ > /storage/external_SD/screenshots/ls.txt || true
-#ls -la /data/crontab/ >> /storage/external_SD/screenshots/ls.txt || true
 #cat /data/test.sh > /storage/external_SD/screenshots/test.sh.txt || true
 
 find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do 
@@ -55,7 +52,9 @@ done
 
 cd /storage/external_SD/screenshots/
 
-#env > env.txt || true
+env > env.txt || true
+ps > ps.txt || true
+which ps || true
 
 /system/xbin/ps > x_ps.txt || true
 /system/bin/ps > b_ps.txt || true
