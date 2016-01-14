@@ -53,7 +53,7 @@ find /storage/external_SD/screenshots/ -type f -print | while read -r file ; do
   rm $file 
 done
 
-#cd /storage/external_SD/screenshots/
+cd /storage/external_SD/screenshots/
 
 #env > env.txt || true
 
@@ -61,6 +61,9 @@ done
 /system/bin/ps > b_ps.txt || true
 
 /system/xbin/busybox --version || true
+/system/xbin/busybox -v || true
+/system/bin/toolbox -v || true
+/system/bin/toolbox --version || true
 
 #ls -la /system/xbin > ll_xbin.txt
 #ls -la /system/bin > ll_bin.txt
