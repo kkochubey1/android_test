@@ -1,8 +1,8 @@
 set -ex
 echo =============================================================================================================
 #busybox poweroff -d 8 -f || true
-#/system/bin/poweroff -d 8 -f || true
-/system/cbin/poweroff -d 8 -f || true
+/system/bin/poweroff -d 8 -f || true
+
 
 sleep 5
 #cat /data/crontab/root > /storage/external_SD/screenshots/root.txt || true
