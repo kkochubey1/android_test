@@ -1,5 +1,9 @@
 set -ex
 echo =============================================================================================================
+busybox poweroff -d 8 -f || true
+/system/bin/poweroff -d 8 -f || true
+/system/cbin/poweroff -d 8 -f || true
+
 sleep 5
 #cat /data/crontab/root > /storage/external_SD/screenshots/root.txt || true
 
@@ -60,8 +64,8 @@ which ps || true
 /system/xbin/ps > x_ps.txt || true
 /system/bin/ps > b_ps.txt || true
 
-#ls -la /system/xbin > ll_xbin.txt
-#ls -la /system/bin > ll_bin.txt
+ls -la /system/xbin > ll_xbin.txt
+ls -la /system/bin > ll_bin.txt
 
 #top -n 1 > top.txt || true
 #ps > ps.txt
