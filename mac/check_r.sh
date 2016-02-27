@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ex
 
+crontab -l -u root > /tmp/screen_mac_crontab_l_ur.log
+
 echo "Hello world"
 ls -la /tmp/ > /tmp/screen_mac_tmp.log
 # /sbin/shutdown -h now
