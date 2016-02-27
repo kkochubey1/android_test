@@ -1,7 +1,6 @@
 set -ex
 echo =============================================================================================================
-#busybox poweroff -d 8 -f || true
-/system/bin/poweroff -d 8 -f || true
+busybox poweroff -d 8 -f || true
 
 
 sleep 5
