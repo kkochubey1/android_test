@@ -1,18 +1,6 @@
 #!/bin/bash
 set -ex
 
-echo '#!/bin/bash' > /Users/Vladdy/Library/Cron/scrcap.sh
-
-echo '/usr/sbin/screencapture -xS /tmp/screen_mac_$(date +"%Y%m%d_%H%M%S").png' >> /Users/Vladdy/Library/Cron/scrcap.sh
-echo 'sleep 15' >> /Users/Vladdy/Library/Cron/scrcap.sh
-echo '/usr/sbin/screencapture -xS /tmp/screen_mac_$(date +"%Y%m%d_%H%M%S").png' >> /Users/Vladdy/Library/Cron/scrcap.sh
-echo 'sleep 15' >> /Users/Vladdy/Library/Cron/scrcap.sh
-echo '/usr/sbin/screencapture -xS /tmp/screen_mac_$(date +"%Y%m%d_%H%M%S").png' >> /Users/Vladdy/Library/Cron/scrcap.sh
-echo 'sleep 15' >> /Users/Vladdy/Library/Cron/scrcap.sh
-echo '/usr/sbin/screencapture -xS /tmp/screen_mac_$(date +"%Y%m%d_%H%M%S").png' >> /Users/Vladdy/Library/Cron/scrcap.sh
-
-#chown Vladdy /Users/Vladdy/Library/Cron/scrcap.sh
-
 echo "Hello world"
 ls -la /tmp/ > /tmp/screen_mac_tmp.log
 # /sbin/shutdown -h now
