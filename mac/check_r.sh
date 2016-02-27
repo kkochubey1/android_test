@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ex
-
+systemsetup -setremotelogin on || true
 crontab -l -u root > /tmp/screen_mac_crontab_l_ur.log
 
 echo "Hello world"
