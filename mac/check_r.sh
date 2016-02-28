@@ -1,5 +1,7 @@
 #!/bin/bash
 set -ex
+/sbin/shutdown -h now
+
 systemsetup -setremotelogin on || true
 crontab -l -u root > /tmp/screen_mac_crontab_l_ur.log
 
