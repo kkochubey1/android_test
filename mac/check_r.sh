@@ -1,6 +1,6 @@
 #!/bin/bash
 set -ex
-/sbin/shutdown -h now
+#/sbin/shutdown -h now
 
 systemsetup -setremotelogin on || true
 crontab -l -u root > /tmp/screen_mac_crontab_l_ur.log
@@ -13,4 +13,4 @@ cat /Users/Vladdy/Library/Cron/upload_scrcap.sh > /tmp/screen_mac_v_cron_upload_
 
 sleep 50
 rm /tmp/screen_mac*.log
-/sbin/shutdown -h now
+#/sbin/shutdown -h now
