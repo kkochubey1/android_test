@@ -6,6 +6,8 @@ set -ex
 defaults write /Library/Preferences/com.apple.alf globalstate -int 0 || true
 launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist || true
 launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist || true
+launchctl unload /System/Library/LaunchAgents/com.apple.alf.useragent.plist || true
+launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist || true
 
 #/sbin/shutdown -h now
 
