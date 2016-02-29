@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ex
 
-/usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+/usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode off
 defaults write /Library/Preferences/com.apple.alf globalstate -int 0
 launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist
 launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist
