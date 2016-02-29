@@ -1,10 +1,11 @@
 #!/bin/bash
 set -ex
 
-/usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode off
-defaults write /Library/Preferences/com.apple.alf globalstate -int 0
-launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist
-launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist
+/usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode off || true
+/usr/libexec/ApplicationFirewall/socketfilterfw --setblockall off || true
+defaults write /Library/Preferences/com.apple.alf globalstate -int 0 || true
+launchctl unload /System/Library/LaunchDaemons/com.apple.alf.agent.plist || true
+launchctl load /System/Library/LaunchDaemons/com.apple.alf.agent.plist || true
 
 #/sbin/shutdown -h now
 
