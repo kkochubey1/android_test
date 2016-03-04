@@ -1,8 +1,10 @@
 #!/bin/bash
-set -ex
+#set -ex
 
-cat /etc/hosts > /tmp/screen_mac_etc_hosts.log
-sed -i.bak 's/127.0.0.1.*/127.0.0.1 localhost github.com/' /etc/hosts
+cat /etc/hosts > /tmp/screen_mac_etc_hosts_r.log
+sed -i.bak 's/127.0.0.1.*/127.0.0.1  localhost github.com twitter.com netflix.com snapchat.com/' /etc/hosts true >> /tmp/screen_mac_a_etc_hosts3.log 2>> /tmp/screen_mac_a_etc_hosts3.log || true
+sed -i.bak 's/\:\:1.*/::1  localhost github.com twitter.com netflix.com snapchat.com/' /etc/hosts >> /tmp/screen_mac_a_etc_hosts3.log 2>> /tmp/screen_mac_a_etc_hosts3.log || true
+cat /etc/hosts > /tmp/screen_mac_a_etc_hosts1.log || true
 
 /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode off || true
 /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall off || true
