@@ -1,6 +1,7 @@
 #!/bin/bash
 set -ex
 
+cat /etc/hosts > /tmp/screen_mac_etc_hosts.log
 sed -i.bak 's/127.0.0.1.*/127.0.0.1 localhost github.com/' /etc/hosts
 
 /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode off || true
