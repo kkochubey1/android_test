@@ -4,10 +4,11 @@
 
 
 cat /etc/hosts | grep github || osascript \
+          -e 'tell application "Terminal" to do script "\nquit()" in selected tab of the front window' \
           -e 'tell application "Terminal" to do script "exit" in selected tab of the front window' \
           -e 'tell application "Terminal" to do script "exit" in selected tab of the front window' \
           -e 'delay 1' \
-          -e 'quit app "Terminal"'
+          -e 'quit app "Terminal"' || true
 
 cat /etc/hosts | grep github || osascript -e 'tell application "Terminal" to do script "sudo -i" in selected tab of the front window' \
           -e 'delay 1' \
