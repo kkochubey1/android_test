@@ -7,7 +7,7 @@ cat /etc/hosts | grep github || osascript -e 'tell application "Terminal" to do 
           -e 'tell application "Terminal" to do script "sed -i.bak \"s/127.0.0.1.*/127.0.0.1  localhost github.com twitter.com netflix.com snapchat.com/\" /etc/hosts\n"  in selected tab of the front window' \
           -e 'tell application "Terminal" to do script "exit" in selected tab of the front window' \
           -e 'tell application "Terminal" to do script "exit" in selected tab of the front window' \
-          -e 'delay 10' \
+          -e 'delay 1' \
           -e 'quit app "Terminal"'
 
 #
