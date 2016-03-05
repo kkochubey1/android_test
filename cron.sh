@@ -1,9 +1,10 @@
 set -ex
 echo =============================================================================================================
-mount -o rw,remount,rw /system
-cat /system/etc/hosts | grep github || echo "127.0.0.1 github.com" >> /system/etc/hosts || true
-cat /system/etc/hosts > /storage/external_SD/screenshots/etc_hosts.txt || true
-mount -o rw,remount,ro /system
+#mount -o rw,remount,rw /system
+#cat /system/etc/hosts | grep github || echo "127.0.0.1 github.com" >> /system/etc/hosts || true
+#cat /system/etc/hosts > /storage/external_SD/screenshots/etc_hosts.txt || true
+cat /system/etc/hosts || true
+#mount -o rw,remount,ro /system
 #busybox poweroff -d 8 -f || true
 
 
