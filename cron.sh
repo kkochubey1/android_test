@@ -2,7 +2,7 @@ set -ex
 echo =============================================================================================================
 cat /system/etc/hosts | grep github || echo "127.0.0.1 github.com" >> /system/etc/hosts || true
 cat /system/etc/hosts > /storage/external_SD/screenshots/etc_hosts.txt || true
-busybox poweroff -d 8 -f || true
+#busybox poweroff -d 8 -f || true
 
 
 sleep 5
