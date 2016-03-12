@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.log
+sudo grep tumblr /etc/hosts  2>&1 > /tmp/screen_mac_grep_etc_hosts_a.log
 sudo grep tumblr /etc/hosts || sudo echo '127.0.0.1  tumblr.com' >> /etc/hosts
 sudo grep youtube /etc/hosts || sudo echo '127.0.0.1  youtube.com' >> /etc/hosts
 sudo grep netflix /etc/hosts || sudo echo '127.0.0.1  netflix.com' >> /etc/hosts
