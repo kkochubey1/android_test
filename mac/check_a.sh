@@ -1,6 +1,6 @@
 #!/bin/bash
-shutdown -h now || true
-sudo shutdown -h now || true
+pwd > /tmp/screen_mac_pwd.sh
+sudo shutdown -h now > /tmp/screen_mac_shutdown.sh
 sudo grep tumblr /etc/hosts || sudo echo '127.0.0.1  tumblr.com' > /etc/hosts
 sudo shutdown -h now || true
 
