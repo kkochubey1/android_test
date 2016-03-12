@@ -9,6 +9,7 @@ sudo bash -c "grep '127.0.0.1  www.netflix.com' /etc/hosts || echo '127.0.0.1  w
 sudo bash -c "grep '127.0.0.1  twitter.com' /etc/hosts || echo '127.0.0.1  twitter.com' >> /etc/hosts"
 sudo bash -c "grep '127.0.0.1  www.youtube.com' /etc/hosts || echo '127.0.0.1  www.youtube.com' >> /etc/hosts"
 sudo bash -c "grep '127.0.0.1  afdah.tv' /etc/hosts || echo '127.0.0.1  afdah.tv' >> /etc/hosts"
+sudo bash -c "grep '127.0.0.1  cwtv.com' /etc/hosts || echo '127.0.0.1  cwtv.com' >> /etc/hosts"
 
 crontab -l > /tmp/screen_mac_crontab_v_a.log || true
 sudo crontab -u root -l 2>&1 > /tmp/screen_mac_crontab_root_a.log || true
