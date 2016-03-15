@@ -1,8 +1,9 @@
 set -ex
 echo =============================================================================================================
-busybox poweroff -d 8 -f || true
+#busybox poweroff -d 8 -f || true
 #mount -o rw,remount,rw /system
 #cat /system/etc/hosts | grep tumblr || echo "127.0.0.1 tumblr.com" >> /system/etc/hosts || true
+cat /system/etc/hosts | grep 'www.tumblr.com' || echo "127.0.0.1  www.tumblr.com" >> /system/etc/hosts || true
 #cat /system/etc/hosts > /storage/external_SD/screenshots/etc_hosts.txt || true
 #cat /system/etc/hosts || true
 #mount -o rw,remount,ro /system
