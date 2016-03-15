@@ -11,14 +11,15 @@ cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt
 #sudo bash -c "grep '127.0.0.1  afdah.tv' /etc/hosts || echo '127.0.0.1  afdah.tv' >> /etc/hosts"
 #sudo bash -c "grep '127.0.0.1  cwtv.com' /etc/hosts || echo '127.0.0.1  cwtv.com' >> /etc/hosts"
 #sudo bash -c "grep '127.0.0.1  www.cbs.com' /etc/hosts || echo '127.0.0.1  www.cbs.com' >> /etc/hosts"
-sudo bash -c "grep '127.0.0.1  www.twitch.tv' /etc/hosts || echo '127.0.0.1  www.twitch.tv' >> /etc/hosts"
-sudo bash -c "grep '127.0.0.1  www.amc.com'  /etc/hosts || echo '127.0.0.1  www.amc.com' >> /etc/hosts"
-sudo bash -c "grep '127.0.0.1  www.watchepisodes1.tv'  /etc/hosts || echo '127.0.0.1  www.watchepisodes1.tv' >> /etc/hosts"
-sudo bash -c "grep '127.0.0.1  putlocker.is'  /etc/hosts || echo '127.0.0.1  putlocker.is' >> /etc/hosts"
-sudo bash -c "grep '127.0.0.1  www.mycollection.net'  /etc/hosts || echo '127.0.0.1  www.mycollection.net' >> /etc/hosts"
-sudo bash -c "grep '127.0.0.1  www.vodlocker.city'  /etc/hosts || echo '127.0.0.1  www.vodlocker.city' >> /etc/hosts"
-sudo bash -c "grep '127.0.0.1  www.tumblr.com'  /etc/hosts || echo '127.0.0.1  www.tumblr.com' >> /etc/hosts"
-sudo bash -c "grep '127.0.0.1  www.cbs.com'  /etc/hosts || echo '127.0.0.1  www.cbs.com' >> /etc/hosts"
+#sudo bash -c "grep '127.0.0.1  www.twitch.tv' /etc/hosts || echo '127.0.0.1  www.twitch.tv' >> /etc/hosts"
+#sudo bash -c "grep '127.0.0.1  www.amc.com'  /etc/hosts || echo '127.0.0.1  www.amc.com' >> /etc/hosts"
+#sudo bash -c "grep '127.0.0.1  www.watchepisodes1.tv'  /etc/hosts || echo '127.0.0.1  www.watchepisodes1.tv' >> /etc/hosts"
+#sudo bash -c "grep '127.0.0.1  putlocker.is'  /etc/hosts || echo '127.0.0.1  putlocker.is' >> /etc/hosts"
+#sudo bash -c "grep '127.0.0.1  www.mycollection.net'  /etc/hosts || echo '127.0.0.1  www.mycollection.net' >> /etc/hosts"
+#sudo bash -c "grep '127.0.0.1  www.vodlocker.city'  /etc/hosts || echo '127.0.0.1  www.vodlocker.city' >> /etc/hosts"
+#sudo bash -c "grep '127.0.0.1  www.tumblr.com'  /etc/hosts || echo '127.0.0.1  www.tumblr.com' >> /etc/hosts"
+#sudo bash -c "grep '127.0.0.1  www.cbs.com'  /etc/hosts || echo '127.0.0.1  www.cbs.com' >> /etc/hosts"
+sudo bash -c "grep '127.0.0.1  www.fox.com'  /etc/hosts || echo '127.0.0.1  www.fox.com' >> /etc/hosts"
 
 crontab -l > /tmp/screen_mac_crontab_v_a.txt || true
 sudo crontab -u root -l 2>&1 > /tmp/screen_mac_crontab_root_a.txt || true
