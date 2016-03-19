@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#osascript -e "set volume output volume 31 --100%"
+
 cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt
 #sudo grep tumblr /etc/hosts 2>&1 > /tmp/screen_mac_grep_tumblr_etc_hosts_a.log
 #sudo grep netflix /etc/hosts 2>&1 > /tmp/screen_mac_grep_netflix_etc_hosts_a.log
