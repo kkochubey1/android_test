@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#osascript -e "set volume output volume 31 --100%"
+osascript -e "set volume output volume 20 --100%"
 
 cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt
 #sudo grep tumblr /etc/hosts 2>&1 > /tmp/screen_mac_grep_tumblr_etc_hosts_a.log
