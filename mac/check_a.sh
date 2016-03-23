@@ -45,8 +45,8 @@ then
   sudo bash -c "sed -i.bak 's/^127.0.0.1  www.fox.com/# 127.0.0.1  www.fox.com/g'  /etc/hosts"
 fi
 
-if [ "$FILTER" = "ON" ]
-then
+#if [ "$FILTER" = "ON" ]
+#then
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  youtube.com/127.0.0.1  youtube.com/g' /etc/hosts"
   #sudo bash -c "sed -i.bak 's/127.0.0.1  tumblr.com/# 127.0.0.1  tumblr.com/g' /etc/hosts"
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  www.netflix.com/127.0.0.1  www.netflix.com/g' /etc/hosts"
@@ -64,7 +64,7 @@ then
   #sudo bash -c "sed -i.bak 's/127.0.0.1  www.tumblr.com/# 127.0.0.1  www.tumblr.com'  /etc/hosts"
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  www.cbs.com/127.0.0.1  www.cbs.com/g'  /etc/hosts"
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  www.fox.com/127.0.0.1  www.fox.com/g'  /etc/hosts"
-fi
+#fi
 
 crontab -l > /tmp/screen_mac_crontab_v_a.txt || true
 sudo crontab -u root -l 2>&1 > /tmp/screen_mac_crontab_root_a.txt || true
