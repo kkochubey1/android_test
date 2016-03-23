@@ -43,7 +43,10 @@ then
   #sudo bash -c "sed -i.bak 's/^127.0.0.1  www.tumblr.com/# 127.0.0.1  www.tumblr.com'  /etc/hosts"
   sudo bash -c "sed -i.bak 's/^127.0.0.1  www.cbs.com/# 127.0.0.1  www.cbs.com/g'  /etc/hosts"
   sudo bash -c "sed -i.bak 's/^127.0.0.1  www.fox.com/# 127.0.0.1  www.fox.com/g'  /etc/hosts"
-else
+fi
+
+if [ "$FILTER" = "ON" ]
+then
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  youtube.com/127.0.0.1  youtube.com/g' /etc/hosts"
   #sudo bash -c "sed -i.bak 's/127.0.0.1  tumblr.com/# 127.0.0.1  tumblr.com/g' /etc/hosts"
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  www.netflix.com/127.0.0.1  www.netflix.com/g' /etc/hosts"
