@@ -24,6 +24,7 @@ cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt
 #sudo bash -c "grep '127.0.0.1  www.cbs.com'  /etc/hosts || echo '127.0.0.1  www.cbs.com' >> /etc/hosts"
 #sudo bash -c "grep '127.0.0.1  www.fox.com'  /etc/hosts || echo '127.0.0.1  www.fox.com' >> /etc/hosts"
 sudo bash -c "grep '127.0.0.1  123movies.to'  /etc/hosts || echo '127.0.0.1  123movies.to' >> /etc/hosts"
+sudo bash -c "grep '127.0.0.1  www.hdmovieswatch.net'  /etc/hosts || echo '127.0.0.1  www.hdmovieswatch.net' >> /etc/hosts"
 
 
 if [ "$FILTER" = "OFF" ]
