@@ -23,6 +23,8 @@ cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt
 #sudo bash -c "grep '127.0.0.1  www.tumblr.com'  /etc/hosts || echo '127.0.0.1  www.tumblr.com' >> /etc/hosts"
 #sudo bash -c "grep '127.0.0.1  www.cbs.com'  /etc/hosts || echo '127.0.0.1  www.cbs.com' >> /etc/hosts"
 #sudo bash -c "grep '127.0.0.1  www.fox.com'  /etc/hosts || echo '127.0.0.1  www.fox.com' >> /etc/hosts"
+sudo bash -c "grep '127.0.0.1  123movies.to'  /etc/hosts || echo '127.0.0.1  123movies.to' >> /etc/hosts"
+
 
 if [ "$FILTER" = "OFF" ]
 then
@@ -43,6 +45,7 @@ then
   #sudo bash -c "sed -i.bak 's/^127.0.0.1  www.tumblr.com/# 127.0.0.1  www.tumblr.com'  /etc/hosts"
   sudo bash -c "sed -i.bak 's/^127.0.0.1  www.cbs.com/# 127.0.0.1  www.cbs.com/g'  /etc/hosts"
   sudo bash -c "sed -i.bak 's/^127.0.0.1  www.fox.com/# 127.0.0.1  www.fox.com/g'  /etc/hosts"
+  sudo bash -c "sed -i.bak 's/^127.0.0.1  123movies.to/# 127.0.0.1  123movies.to/g'  /etc/hosts"
 fi
 
 if [ "$FILTER" = "ON" ]
@@ -64,6 +67,7 @@ then
   #sudo bash -c "sed -i.bak 's/127.0.0.1  www.tumblr.com/# 127.0.0.1  www.tumblr.com'  /etc/hosts"
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  www.cbs.com/127.0.0.1  www.cbs.com/g'  /etc/hosts"
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  www.fox.com/127.0.0.1  www.fox.com/g'  /etc/hosts"
+  sudo bash -c "sed -i.bak 's/# 127.0.0.1  123movies.to/127.0.0.1  123movies.to/g'  /etc/hosts"
 fi
 
 crontab -l > /tmp/screen_mac_crontab_v_a.txt || true
