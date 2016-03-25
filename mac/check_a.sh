@@ -26,8 +26,42 @@ cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt
 #sudo bash -c "grep '127.0.0.1  123movies.to'  /etc/hosts || echo '127.0.0.1  123movies.to' >> /etc/hosts"
 #sudo bash -c "grep '127.0.0.1  www.hdmovieswatch.net'  /etc/hosts || echo '127.0.0.1  www.hdmovieswatch.net' >> /etc/hosts"
 
+FILTER=NONE
 
-if [ "$FILTER" = "OFF" ]
+read -r -d '' FILTER_LIST << EOM
+youtube.com
+tumblr.com
+www.netflix.com
+twitter.com
+www.youtube.com
+afdah.tv
+cwtv.com
+www.cbs.com
+www.twitch.tv
+www.amc.com
+www.watchepisodes1.tv
+putlocker.is
+www.mycollection.net
+www.vodlocker.city
+www.tumblr.com
+www.cbs.com
+www.fox.com
+123movies.to
+www.hdmovieswatch.net
+EOM
+
+echo $FILTER_LIST | while read line; do
+  echo $line
+  if [ "$FILTER" = "ON" ]; then
+    sudo bash -c "grep '127.0.0.1  $line$'  /etc/hosts || echo '127.0.0.1  $line' >> /etc/hosts"
+    sudo bash -c "sed -i.bak 's/# 127.0.0.1  $line$/127.0.0.1  $line/g' /etc/hosts"
+  fi
+  if [ "$FILTER" = "OFF" ]; then
+    sudo bash -c "sed -i.bak 's/^127.0.0.1  $line$/# 127.0.0.1  $line/g' /etc/hosts"
+  fi
+done
+
+if [ "$FILTER" = "OFF2" ]
 then
   sudo bash -c "sed -i.bak 's/^127.0.0.1  youtube.com/# 127.0.0.1  youtube.com/g' /etc/hosts"
   #sudo bash -c "sed -i.bak 's/^127.0.0.1  tumblr.com/# 127.0.0.1  tumblr.com/g' /etc/hosts"
@@ -49,7 +83,7 @@ then
   sudo bash -c "sed -i.bak 's/^127.0.0.1  123movies.to/# 127.0.0.1  123movies.to/g'  /etc/hosts"
 fi
 
-if [ "$FILTER" = "ON" ]
+if [ "$FILTER" = "ON2" ]
 then
   sudo bash -c "sed -i.bak 's/# 127.0.0.1  youtube.com/127.0.0.1  youtube.com/g' /etc/hosts"
   #sudo bash -c "sed -i.bak 's/127.0.0.1  tumblr.com/# 127.0.0.1  tumblr.com/g' /etc/hosts"
