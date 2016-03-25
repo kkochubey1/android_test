@@ -88,3 +88,8 @@ pwd > /tmp/screen_mac_pwd.txt
 #
 # echo test
 #
+for i in `seq 1 10`;
+do
+  osascript -e "set volume output volume 20 --100%"
+  osascript -e "set Volume 1"
+done
