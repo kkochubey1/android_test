@@ -1,7 +1,7 @@
 #!/bin/bash
 
-osascript -e "set volume output volume 20 --100%" # ON
-osascript -e "set Volume 2" # ON
+# ON osascript -e "set volume output volume 20 --100%"
+# ON osascript -e "set Volume 2"
 
 cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt # OFF
 #sudo grep tumblr /etc/hosts 2>&1 > /tmp/screen_mac_grep_tumblr_etc_hosts_a.log
@@ -27,7 +27,7 @@ cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt # OFF
 #sudo bash -c "grep '127.0.0.1  www.hdmovieswatch.net'  /etc/hosts || echo '127.0.0.1  www.hdmovieswatch.net' >> /etc/hosts"
 
 FILTER=NONE
-FILTER=ON # ON
+# ON FILTER=ON
 FILTER=OFF # OFF
 
 
@@ -125,9 +125,9 @@ pwd > /tmp/screen_mac_pwd.txt
 #
 # echo test
 #
-for i in `seq 1 10`; # ON
-do # ON
-  osascript -e "set volume output volume 20 --100%" # ON
-  osascript -e "set Volume 1" # ON
-  sleep 5 # ON
-done # ON
+# ON for i in `seq 1 10`;
+# ON do
+# ON   osascript -e "set volume output volume 20 --100%"
+# ON   osascript -e "set Volume 1"
+# ON   sleep 5
+# ON done
