@@ -58,7 +58,7 @@ EOM
 echo "$FILTER_LIST" | while read line; do
   echo $line
   if [ "$FILTER" = "ON" ]; then
-    sudo bash -c "grep '127.0.0.1  $line'  /etc/hosts || echo '127.0.0.1  $line' >> /etc/hosts"
+    sudo bash -c "grep '$line'  /etc/hosts || echo '127.0.0.1  $line' >> /etc/hosts"
     sudo bash -c "sed -i.bak 's/# 127.0.0.1  $line/127.0.0.1  $line/g' /etc/hosts"
   fi
   if [ "$FILTER" = "OFF" ]; then
