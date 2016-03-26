@@ -53,7 +53,7 @@ www.fox.com
 www.hdmovieswatch.net
 EOM
 
-echo $FILTER_LIST | while read line; do
+echo "$FILTER_LIST" | while read line; do
   echo $line
   if [ "$FILTER" = "ON" ]; then
     sudo bash -c "grep '127.0.0.1  $line$'  /etc/hosts || echo '127.0.0.1  $line' >> /etc/hosts"
