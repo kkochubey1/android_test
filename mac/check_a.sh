@@ -3,6 +3,8 @@
 osascript -e "set volume output volume 20 --100%" # ON
 osascript -e "set Volume 2" # ON
 
+sudo bash -c "sed -i.bak 's/^127.0.0.1  youtube.com tumblr.com.*$//g' /etc/hosts"
+
 # OFF cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt
 #sudo grep tumblr /etc/hosts 2>&1 > /tmp/screen_mac_grep_tumblr_etc_hosts_a.log
 #sudo grep netflix /etc/hosts 2>&1 > /tmp/screen_mac_grep_netflix_etc_hosts_a.log
