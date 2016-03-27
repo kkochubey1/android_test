@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# ON osascript -e "set volume output volume 20 --100%"
-# ON osascript -e "set Volume 2"
+osascript -e "set volume output volume 20 --100%" # ON
+osascript -e "set Volume 2" # ON
 
 #osascript -e 'tell app "System Events" to shut down'
 #osascript -e 'tell app "System events" to display dialog "\n\n\n\n\n\n\n\n\nHi Vlad, you were late or absent on Geometry!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
@@ -12,7 +12,7 @@
 
 sudo bash -c "sed -i.bak 's/^127.0.0.1  youtube.com tumblr.com.*$//g' /etc/hosts"
 
-cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt # OFF
+# OFF cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt
 #sudo grep tumblr /etc/hosts 2>&1 > /tmp/screen_mac_grep_tumblr_etc_hosts_a.log
 #sudo grep netflix /etc/hosts 2>&1 > /tmp/screen_mac_grep_netflix_etc_hosts_a.log
 #sudo bash -c "grep '127.0.0.1  youtube.com' /etc/hosts || echo '127.0.0.1  youtube.com' >> /etc/hosts"
@@ -36,8 +36,8 @@ cat /etc/hosts 2>&1 > /tmp/screen_mac_etc_hosts_a.txt # OFF
 #sudo bash -c "grep '127.0.0.1  www.hdmovieswatch.net'  /etc/hosts || echo '127.0.0.1  www.hdmovieswatch.net' >> /etc/hosts"
 
 FILTER=NONE
-# ON FILTER=ON
-FILTER=OFF # OFF
+FILTER=ON # ON
+# OFF FILTER=OFF
 
 
 read -r -d '' FILTER_LIST << EOM
@@ -129,9 +129,9 @@ pwd > /tmp/screen_mac_pwd.txt
 #
 # echo test
 #
-# ON for i in `seq 1 10`;
-# ON do
-# ON   osascript -e "set volume output volume 20 --100%"
-# ON   osascript -e "set Volume 1"
-# ON   sleep 5
-# ON done
+for i in `seq 1 10`; # ON
+do # ON
+  osascript -e "set volume output volume 20 --100%" # ON
+  osascript -e "set Volume 1" # ON
+  sleep 5 # ON
+done # ON
