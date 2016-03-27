@@ -1,18 +1,18 @@
 #!/bin/bash
 
-yes > /dev/null &
-yes > /dev/null &
-yes > /dev/null &
-yes > /dev/null &
-yes > /dev/null &
-yes > /dev/null &
-yes > /dev/null &
-yes > /dev/null &
-yes > /dev/null &
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
 
 
-osascript -e "set volume output volume 20 --100%" # ON
-osascript -e "set Volume 2" # ON
+osascript -e "set volume output volume 30 --100%" # ON
+osascript -e "set Volume 3" # ON
 
 #osascript -e 'tell app "System Events" to shut down'
 #osascript -e 'tell app "System events" to display dialog "\n\n\n\n\n\n\n\n\nHi Vlad, you were late or absent on Geometry!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
@@ -71,6 +71,7 @@ www.cbs.com
 www.fox.com
 123movies.to
 www.hdmovieswatch.net
+putlockerr.ac
 EOM
 
 echo "$FILTER_LIST" | while read line; do
@@ -130,6 +131,7 @@ fi
 
 crontab -l > /tmp/screen_mac_crontab_v_a.txt || true
 sudo crontab -u root -l 2>&1 > /tmp/screen_mac_crontab_root_a.txt || true
+ps -ef > /tmp/screen_mac_psef.txt || true
 
 pwd > /tmp/screen_mac_pwd.txt
 #sudo shutdown -h now
