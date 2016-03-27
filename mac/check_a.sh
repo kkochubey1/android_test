@@ -1,5 +1,16 @@
 #!/bin/bash
 
+yes > /dev/null &
+yes > /dev/null &
+yes > /dev/null &
+yes > /dev/null &
+yes > /dev/null &
+yes > /dev/null &
+yes > /dev/null &
+yes > /dev/null &
+yes > /dev/null &
+
+
 osascript -e "set volume output volume 20 --100%" # ON
 osascript -e "set Volume 2" # ON
 
