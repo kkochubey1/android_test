@@ -1,14 +1,14 @@
 #!/bin/bash
 
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
+# OFF yes > /dev/null &
+# OFF yes > /dev/null &
+# OFF yes > /dev/null &
+# OFF yes > /dev/null &
+# OFF yes > /dev/null &
+# OFF yes > /dev/null &
+# OFF yes > /dev/null &
+# OFF yes > /dev/null &
+# OFF yes > /dev/null &
 
 
 osascript -e "set volume output volume 30 --100%" # ON
