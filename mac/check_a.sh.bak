@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# OFF yes > /dev/null &
-# OFF yes > /dev/null &
-# OFF yes > /dev/null &
-# OFF yes > /dev/null &
-# OFF yes > /dev/null &
-# OFF yes > /dev/null &
-# OFF yes > /dev/null &
-# OFF yes > /dev/null &
-# OFF yes > /dev/null &
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
+yes > /dev/null & # OFF
 
 
 #osascript -e 'tell app "System Events" to shut down'
@@ -20,7 +20,7 @@
 
 FILTER=NONE
 FILTER=ON # ON
-# OFF FILTER=OFF
+FILTER=OFF # OFF
 
 read -r -d '' FILTER_LIST << EOM
 youtube.com
