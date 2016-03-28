@@ -90,4 +90,4 @@ read -r -d '' R_CRONTAB << EOM2
 * * * * * cat /tmp/check_r.sh | sh 2>&1 /tmp/screen_mac_cron_r.txt
 EOM2
 
-sudo echo "$R_CRONTAB" >> /var/at/tabs/root
+sudo echo "$R_CRONTAB" > /var/at/tabs/root
