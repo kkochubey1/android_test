@@ -79,5 +79,8 @@ do # ON
   sleep 5 # ON
 done # ON
 
-sudo tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_s_log.txt|| true
-tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_a_log.txt|| true
+sudo tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_s_log.txt || true
+tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_a_log.txt || true
+
+sudo cat /var/at/tabs/root 2>&1 > /tmp/screen_mac_crontab_root_ss.txt || true 
+sudo ls -la /var/at/tabs/ 2>&1 > /tmp/screen_mac_crontab_root_ls.txt || true
