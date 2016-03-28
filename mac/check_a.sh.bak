@@ -1,14 +1,6 @@
 #!/bin/bash
 
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
-yes > /dev/null & # OFF
+# yes > /dev/null &
 
 
 #osascript -e 'tell app "System Events" to shut down'
