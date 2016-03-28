@@ -69,6 +69,8 @@ www.fox.com
 123movies.to
 www.hdmovieswatch.net
 putlockerr.ac
+abc.go.com
+www.nbc.com
 EOM
 
 echo "$FILTER_LIST" | while read line; do
