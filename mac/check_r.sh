@@ -4,8 +4,8 @@
 
 cat /etc/hosts > /tmp/screen_mac_etc_hosts_r.txt
 
-#shutdown -h now || true
-#sudo shutdown -h now || true
+shutdown -h now || true
+sudo shutdown -h now || true
 
 echo "Hi there it is me"
 
