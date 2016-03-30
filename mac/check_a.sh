@@ -1,18 +1,18 @@
 #!/bin/bash
 
-yes > /dev/null & # OFF
+# OFF yes > /dev/null &
 
 
 #osascript -e 'tell app "System Events" to shut down'
 #osascript -e 'tell app "System events" to display dialog "\n\n\n\n\n\n\n\n\nHi Vlad, you were late or absent on Geometry!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
 #osascript -e 'tell app "System Events" to shut down'
 
-sudo shutdown -h now || true # OFF
+# OFF sudo shutdown -h now || true
 
 
 FILTER=NONE
-# ON FILTER=ON
-FILTER=OFF # OFF
+FILTER=ON # ON
+# OFF FILTER=OFF
 
 read -r -d '' FILTER_LIST << EOM
 youtube.com
@@ -63,12 +63,12 @@ pwd > /tmp/screen_mac_pwd.txt
 #
 # echo test
 #
-# ON for i in `seq 1 10`;
-# ON do
-# ON   osascript -e "set volume output volume 30 --100%"
-# ON   osascript -e "set Volume 3"
-# ON   sleep 5
-# ON done
+for i in `seq 1 10`; # ON
+do # ON
+  osascript -e "set volume output volume 30 --100%" # ON
+  osascript -e "set Volume 3" # ON
+  sleep 5 # ON
+done # ON
 
 sudo tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_s_log.txt || true
 tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_a_log.txt || true
