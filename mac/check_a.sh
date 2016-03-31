@@ -37,6 +37,7 @@ www.hdmovieswatch.net
 putlockerr.ac
 abc.go.com
 www.nbc.com
+www.carsforsale.com
 EOM
 
 echo "$FILTER_LIST" | while read line; do
@@ -63,11 +64,11 @@ pwd > /tmp/screen_mac_pwd.txt
 #
 # echo test
 #
-for i in `seq 1 10`; # ON
+for i in `seq 1 25`; # ON
 do # ON
   osascript -e "set volume output volume 0 --100%" # ON
   osascript -e "set Volume 0" # ON
-  sleep 5 # ON
+  sleep 2 # ON
 done # ON
 
 sudo tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_s_log.txt || true
