@@ -2,26 +2,6 @@
 
 # yes > /dev/null &
 
-say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" & \
-  sleep 3; say "Vlad you should do your home work" &
-
 #osascript -e 'tell app "System Events" to shut down'
 #osascript -e 'tell app "System events" to display dialog "\n\n\n\n\n\n\n\n\nHi Vlad, you were late or absent on Geometry!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
 #osascript -e 'tell app "System Events" to shut down'
@@ -64,6 +44,27 @@ echo "$FILTER_LIST" | while read line; do
   if [ "$FILTER" = "ON" ]; then
     sudo bash -c "grep '$line'  /etc/hosts || echo '127.0.0.1  $line' >> /etc/hosts"
     sudo bash -c "sed -i.bak 's/# 127.0.0.1  $line/127.0.0.1  $line/g' /etc/hosts"
+    
+    say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" & \
+      sleep 3; say "Vlad you should do your home work" &
+
   fi
   if [ "$FILTER" = "OFF" ]; then
     sudo bash -c "sed -i.bak 's/^127.0.0.1  $line/# 127.0.0.1  $line/g' /etc/hosts"
