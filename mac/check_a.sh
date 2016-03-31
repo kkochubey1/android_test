@@ -2,6 +2,25 @@
 
 # yes > /dev/null &
 
+say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" & \
+  sleep 3; say "Vlad you should do your home work" &
 
 #osascript -e 'tell app "System Events" to shut down'
 #osascript -e 'tell app "System events" to display dialog "\n\n\n\n\n\n\n\n\nHi Vlad, you were late or absent on Geometry!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
@@ -64,12 +83,12 @@ pwd > /tmp/screen_mac_pwd.txt
 #
 # echo test
 #
-for i in `seq 1 25`; # ON
-do # ON
-  osascript -e "set volume output volume 0 --100%" # ON
-  osascript -e "set Volume 0" # ON
-  sleep 2 # ON
-done # ON
+# for i in `seq 1 25`; # ON
+# do # ON
+#   osascript -e "set volume output volume 0 --100%" # ON
+#   osascript -e "set Volume 0" # ON
+#   sleep 2 # ON
+# done # ON
 
 sudo tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_s_log.txt || true
 tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_a_log.txt || true
