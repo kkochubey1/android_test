@@ -37,6 +37,7 @@ putlockerr.ac
 abc.go.com
 www.nbc.com
 www.carsforsale.com
+www.instagram.com
 EOM
 
 echo "$FILTER_LIST" | while read line; do
