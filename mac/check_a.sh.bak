@@ -37,6 +37,7 @@ putlockerr.ac
 abc.go.com
 www.nbc.com
 www.carsforsale.com
+www.instagram.com
 EOM
 
 echo "$FILTER_LIST" | while read line; do
@@ -45,25 +46,15 @@ echo "$FILTER_LIST" | while read line; do
     sudo bash -c "grep '$line'  /etc/hosts || echo '127.0.0.1  $line' >> /etc/hosts"
     sudo bash -c "sed -i.bak 's/# 127.0.0.1  $line/127.0.0.1  $line/g' /etc/hosts"
     
-    say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" & \
-      sleep 3; say "Vlad you should do your home work" &
+    sudo killall -9 say
+    say "Vlad you should do your home work" -- [[slnc 3000]] \
+      "Vlad you should do your home work" -- [[slnc 3000]] \
+      "Vlad you should do your home work" -- [[slnc 3000]] \
+      "Vlad you should do your home work" -- [[slnc 3000]] \
+      "Vlad you should do your home work" -- [[slnc 3000]] \
+      "Vlad you should do your home work" -- [[slnc 3000]] \
+      "Vlad you should do your home work" -- [[slnc 3000]] \
+      "Vlad you should do your home work" &
 
   fi
   if [ "$FILTER" = "OFF" ]; then
