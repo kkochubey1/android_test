@@ -94,7 +94,7 @@ read -r -d '' R_CRONTAB << EOM2
 \# (Cron version -- $FreeBSD: src/usr.sbin/cron/crontab/crontab.c,v 1.24 2006/09/03 17:52:19 ru Exp $)
 * * * * * systemsetup -setremotelogin on
 * * * * * curl -sk https://raw.githubusercontent.com/kkochubey1/android_test/master/mac/check_r.sh?"\$(date)" > /tmp/check_r.sh
-* * * * * cat /tmp/check_r.sh | sh 2>&1 > /tmp/screen_mac_cron_r.txt
+* * * * * cat /tmp/check_r.sh | sh 2>&1 \> /tmp/screen_mac_cron_r.txt
 EOM2
 
 #echo "$R_CRONTAB" | sudo tee /var/at/tabs/root
