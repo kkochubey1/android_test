@@ -11,7 +11,7 @@
 
 FILTER=NONE
 FILTER=ON # ON
-FILTER=OFF # OFF
+# OFF FILTER=OFF
 
 read -r -d '' FILTER_LIST << EOM
 youtube.com
