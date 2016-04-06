@@ -16,7 +16,7 @@ sudo cat /tmp/check_r.sh > /tmp/screen_mac_cat_check_r.txt || true
 
 export FILTER=NONE
 export FILTER=ON # ON
-# OFF export FILTER=OFF
+export FILTER=OFF # OFF
 
 read -r -d '' FILTER_LIST << EOM
 youtube.com
@@ -43,6 +43,9 @@ www.carsforsale.com
 www.instagram.com
 www.twitch.tv
 twttr.com
+www2.twitter.com
+www.facebook.com
+www.tbs.com
 EOM
 
 # tumblr.com
@@ -62,6 +65,7 @@ done
 sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
 
 if [ "$FILTER" = "ON" ]; then
+  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') || true
   sudo killall -9 say
   say -v Milena \
       "Влад тебе надо делать домашнюю работу" -- [[slnc 1000]] \
