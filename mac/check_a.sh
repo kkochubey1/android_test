@@ -45,6 +45,7 @@ www.twitch.tv
 twttr.com
 www2.twitter.com
 www.facebook.com
+www.tbs.com
 EOM
 
 # tumblr.com
@@ -64,7 +65,7 @@ done
 sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
 
 if [ "$FILTER" = "ON" ]; then
-  sudo kill $(ps aux | grep 'twitter' | awk '{print $2}') || true
+  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') || true
   sudo killall -9 say
   say -v Milena \
       "Влад тебе надо делать домашнюю работу" -- [[slnc 1000]] \
