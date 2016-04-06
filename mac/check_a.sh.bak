@@ -42,6 +42,7 @@ www.nbc.com
 www.carsforsale.com
 www.instagram.com
 www.twitch.tv
+twttr.com
 EOM
 
 # tumblr.com
