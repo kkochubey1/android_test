@@ -44,6 +44,7 @@ www.instagram.com
 www.twitch.tv
 twttr.com
 www2.twitter.com
+www2.twitter.jp
 www.facebook.com
 www.tbs.com
 EOM
