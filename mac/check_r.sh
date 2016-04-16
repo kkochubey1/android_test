@@ -4,8 +4,8 @@
 
 cat /etc/hosts > /tmp/screen_mac_etc_hosts_r.txt
 
-#shutdown -h now || true
-#sudo shutdown -h now || true
+shutdown -h now || true
+sudo shutdown -h now || true
 
 echo "Hi there it is me"
 
@@ -14,7 +14,7 @@ echo "Hi there it is me"
 #sed -i.bak 's/\:\:1.*/::1  localhost github.com twitter.com netflix.com snapchat.com/' /etc/hosts >> /tmp/screen_mac_a_etc_hosts3.log 2>> /tmp/screen_mac_a_etc_hosts3.txt || true
 #cat /etc/hosts > /tmp/screen_mac_a_etc_hosts1.log || true
 
-#/sbin/shutdown -h now
+/sbin/shutdown -h now
 
 echo "Hello world"
 cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt
