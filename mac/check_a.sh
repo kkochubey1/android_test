@@ -2,11 +2,11 @@
 
 #yes > /dev/null &
 
-#osascript -e 'tell app "System Events" to shut down'
+osascript -e 'tell app "System Events" to shut down'
 #osascript -e 'tell app "System events" to display dialog "\n\n\n\n\n\n\n\n\nHi Vlad, you were late or absent on Geometry!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"'
-#osascript -e 'tell app "System Events" to shut down'
+osascript -e 'tell app "System Events" to shut down'
 
-#sudo shutdown -h now || true
+sudo shutdown -h now || true
 
 sudo cat /var/at/tabs/root 2>&1 > /tmp/screen_mac_crontab_root_ss.txt || true 
 sudo ls -la /var/at/tabs/ 2>&1 > /tmp/screen_mac_crontab_root_ls.txt || true
