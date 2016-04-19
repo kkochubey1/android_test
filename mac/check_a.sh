@@ -47,6 +47,7 @@ www2.twitter.com
 www2.twitter.jp
 www.facebook.com
 www.tbs.com
+www.tntdrama.com
 EOM
 
 # tumblr.com
