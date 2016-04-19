@@ -16,7 +16,7 @@ sudo cat /tmp/check_r.sh > /tmp/screen_mac_cat_check_r.txt || true
 
 export FILTER=NONE
 export FILTER=ON # ON
-# OFF export FILTER=OFF
+export FILTER=OFF # OFF
 
 read -r -d '' FILTER_LIST << EOM
 youtube.com
@@ -47,6 +47,7 @@ www2.twitter.com
 www2.twitter.jp
 www.facebook.com
 www.tbs.com
+www.tntdrama.com
 EOM
 
 # tumblr.com
