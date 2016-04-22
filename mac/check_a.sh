@@ -15,8 +15,8 @@ sudo cat /tmp/check_r.sh > /tmp/screen_mac_cat_check_r.txt || true
 
 
 export FILTER=NONE
-# ON export FILTER=ON
-export FILTER=OFF # OFF
+export FILTER=ON # ON
+# OFF export FILTER=OFF
 
 read -r -d '' FILTER_LIST << EOM
 youtube.com
@@ -98,12 +98,12 @@ pwd > /tmp/screen_mac_pwd.txt
 #
 # echo test
 #
-# ON # for i in `seq 1 25`;
-# ON # do
-# ON #   osascript -e "set volume output volume 0 --100%"
-# ON #   osascript -e "set Volume 0"
-# ON #   sleep 2
-# ON # done
+# for i in `seq 1 25`; # ON
+# do # ON
+#   osascript -e "set volume output volume 0 --100%" # ON
+#   osascript -e "set Volume 0" # ON
+#   sleep 2 # ON
+# done # ON
 
 sudo tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_s_log.txt || true
 tail -n 100 trail /var/log/cron.log 2>&1 > /tmp/screen_mac_crontab_a_log.txt || true
