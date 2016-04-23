@@ -48,6 +48,7 @@ www2.twitter.jp
 www.facebook.com
 www.tbs.com
 www.tntdrama.com
+play.spotify.com
 EOM
 
 # tumblr.com
