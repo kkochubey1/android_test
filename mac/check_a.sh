@@ -49,6 +49,7 @@ www.facebook.com
 www.tbs.com
 www.tntdrama.com
 play.spotify.com
+www.amazon.com
 EOM
 
 # tumblr.com
