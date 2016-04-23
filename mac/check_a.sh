@@ -102,6 +102,7 @@ pwd > /tmp/screen_mac_pwd.txt
 #
 for i in `seq 1 25`; # ON
 do # ON
+   sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') || true
    osascript -e "set volume output volume 1 --100%" # ON
    osascript -e "set Volume 1" # ON
    sleep 2 # ON
