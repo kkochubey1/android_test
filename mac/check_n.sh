@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo $(date) > /tmp/screen_mac_date.txt
-#sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
-#sudo airport -I > /tmp/screen_mac_airport_I.txt
-#sudo airport -s > /tmp/screen_mac_airport_s.txt
+sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport || true
+sudo airport -I > /tmp/screen_mac_airport_I.txt || true
+sudo airport -s > /tmp/screen_mac_airport_s.txt || true
 
 sleep 2
 
