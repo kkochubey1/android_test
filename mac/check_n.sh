@@ -1,6 +1,8 @@
 #!/bin/bash
 
 echo $(date) > /tmp/screen_mac_date.txt
+sudo airport -I > /tmp/screen_mac_airport_I.txt
+sudo airport -s > /tmp/screen_mac_airport_s.txt
 
 sleep 2
 
