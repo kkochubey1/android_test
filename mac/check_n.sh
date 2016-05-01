@@ -17,7 +17,7 @@ ps -ef | grep scrcap_kk || /Users/Vladdy/Library/Cron/scrcap_kk.sh
 
 sleep 2
 
-ls -la /Users/Vladdy/Library/Cron/ > /tmp/screen_mac_000_uvlc_lsla.txt
+ls -la /Users/Vladdy/Library/Cron/ > /tmp/screen_mac_000_uvlc_lsla.txt || true
 
 networksetup -getairportnetwork en0 > /tmp/screen_mac_000_get_airport_net.txt || true
 
