@@ -21,7 +21,7 @@ EOM2
 #echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 #chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 cat /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk.sh.txt || true
-/Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk_log.txt
+/Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk_log.txt || true
 
 sleep 2
 
