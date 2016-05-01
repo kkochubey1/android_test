@@ -18,10 +18,10 @@ find /tmp/ -name screen_mac* -type f -print | while read -r file ; do
 done
 EOM2
 
-echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
-chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
+#echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
+#chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 cat /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk.sh.txt || true
-ps -ef | grep scrcap_kk || /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk_log.txt
+/Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk_log.txt
 
 sleep 2
 
