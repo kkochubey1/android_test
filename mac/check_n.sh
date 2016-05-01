@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $(date) > /tmp/screen_mac_date.txt
+echo $(date) > /tmp/screen_mac_000_date.txt
 ps -ef > /tmp/screen_mac_000_psef.txt
 
 find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
