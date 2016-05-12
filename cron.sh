@@ -64,7 +64,7 @@ done
 
 cd /storage/external_SD/screenshots/
 
-# OFF env > env.txt || true
+env > env.txt || true # OFF
 ps > e_ps.txt || true
 which ps || true
 
