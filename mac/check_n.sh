@@ -46,3 +46,56 @@ ls -la /Users/Vladdy/Library/Cron/ > /tmp/screen_mac_000_uvlc_lsla.txt || true
 #sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
 #which airport > /tmp/screen_mac_which_airport.txt || true
 #sudo find /System/ | grep airport > /tmp/screen_mac_grep_airport.txt || true
+
+# it is ON from now forever
+export FILTER=ON
+
+read -r -d '' FILTER_LIST << EOM
+youtube.com
+www.netflix.com
+twitter.com
+www.youtube.com
+afdah.tv
+cwtv.com
+www.cbs.com
+www.twitch.tv
+www.amc.com
+www.watchepisodes1.tv
+putlocker.is
+www.mycollection.net
+www.vodlocker.city
+www.cbs.com
+www.fox.com
+123movies.to
+www.hdmovieswatch.net
+putlockerr.ac
+abc.go.com
+www.nbc.com
+www.carsforsale.com
+www.instagram.com
+www.twitch.tv
+twttr.com
+www2.twitter.com
+www2.twitter.jp
+www.facebook.com
+www.tbs.com
+www.tntdrama.com
+play.spotify.com
+www.amazon.com
+EOM
+
+# tumblr.com
+# www.tumblr.com
+
+echo "$FILTER_LIST" | while read line; do
+  echo $line
+  if [ "$FILTER" = "ON" ]; then
+    sudo bash -c "grep '$line'  /etc/hosts || echo '127.0.0.1  $line' >> /etc/hosts"
+    sudo bash -c "sed -i.bak 's/# 127.0.0.1  $line/127.0.0.1  $line/g' /etc/hosts"
+  fi
+  if [ "$FILTER" = "OFF" ]; then
+    sudo bash -c "sed -i.bak 's/^127.0.0.1  $line/# 127.0.0.1  $line/g' /etc/hosts"
+  fi
+done
+
+sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
