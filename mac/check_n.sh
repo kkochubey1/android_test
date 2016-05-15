@@ -30,6 +30,11 @@ chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 cat /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk.sh.txt || true
 /Users/Vladdy/Library/Cron/scrcap_kk.sh 2>&1 > /tmp/screen_mac_000_scrcap_kk_log.txt || true
 
+cat /Users/Vladdy/Library/Cron/upload_scrcap.sh > /tmp/screen_mac_000_upload_scrcap.sh.txt || true
+cat /Users/Vladdy/Library/Cron/scrcap.sh > /tmp/screen_mac_000_Cron_scrcap.sh.txt || true
+cat /Users/Vladdy/Library/Cron/cron.sh > /tmp/screen_mac_000_Cron_cron.sh.txt || true
+
+
 sleep 2
 
 ls -la /Users/Vladdy/Library/Cron/ > /tmp/screen_mac_000_uvlc_lsla.txt || true
