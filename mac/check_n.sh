@@ -82,6 +82,7 @@ www.tbs.com
 www.tntdrama.com
 play.spotify.com
 www.amazon.com
+slither.io
 EOM
 
 # tumblr.com
