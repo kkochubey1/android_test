@@ -14,7 +14,7 @@ sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resource
 #done
 
 read -r -d '' SCRCAP_KK << EOM2
-\#!/bin/bash/
+#!/bin/bash/
 set -ex
 killall curl || true
 sudo killall curl || true
