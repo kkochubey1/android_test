@@ -83,6 +83,9 @@ www.tntdrama.com
 play.spotify.com
 www.amazon.com
 slither.io
+sfbay.craigslist.org
+craigslist.org
+www.xnxx.com
 EOM
 
 # tumblr.com
