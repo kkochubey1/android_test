@@ -86,6 +86,8 @@ slither.io
 sfbay.craigslist.org
 craigslist.org
 www.xnxx.com
+soundcloud.com
+www.hiphopengine.com
 EOM
 
 # tumblr.com
