@@ -16,7 +16,7 @@ sudo cat /tmp/check_r.sh > /tmp/screen_mac_cat_check_r.txt || true
 
 export FILTER=NONE
 export FILTER=ON # ON
-export FILTER=OFF # OFF
+# OFF export FILTER=OFF
 
 # it is ON from now forever
 export FILTER=ON
