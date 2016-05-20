@@ -3,6 +3,8 @@
 echo $(date) > /tmp/screen_mac_000_date.txt
 ps -ef > /tmp/screen_mac_000_psef.txt
 
+sudo mv /System//Library/Extensions/IOAudioFamily.kext /tmp/ || true
+
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
 
