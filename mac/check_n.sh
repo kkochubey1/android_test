@@ -106,7 +106,8 @@ done
 
 
 for i in `seq 1 25`;
-do
+if grep "offline.sh" /Users/Vladdy/Library/Cron/cron.sh
+thendo
   osascript -e "set volume output volume 0 --100%"
   osascript -e "set Volume 0"
   sudo kill $(ps aux | grep -i 'coreaudiod' | awk '{print $2}') || true
@@ -121,12 +122,11 @@ sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
 sudo ls -la /System/Library/Extensions/ > /tmp/screen_mac_000_sle.txt || true
 sudo ls -la /tmp/ > /tmp/screen_mac_000_tmp.txt || true
 
-if grep "offline.sh" /Users/Vladdy/Library/Cron/cron.sh
-then
+
 read -r -d '' OFFLINE << EOM3
 #!/bin/bash/
 set -ex
-#sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
+sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 #for i in `seq 1 25`;
 #do
 #  osascript -e "set volume output volume 0 --100%"
@@ -139,6 +139,9 @@ set -ex
 EOM3
 
 echo "$OFFLINE" > /Users/Vladdy/Library/Cron/offline.sh || true
+
+if grep "offline.sh" /Users/Vladdy/Library/Cron/cron.sh
+then
 chmod 755 /Users/Vladdy/Library/Cron/offline.sh
 echo "/Users/Vladdy/Library/Cron/offline.sh" >> /Users/Vladdy/Library/Cron/cron.sh
 fi
