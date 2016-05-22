@@ -118,7 +118,7 @@ done
 
 sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
 
-#sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
+sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 sudo ls -la /System/Library/Extensions/ > /tmp/screen_mac_000_sle.txt || true
 sudo ls -la /tmp/ > /tmp/screen_mac_000_tmp.txt || true
 
