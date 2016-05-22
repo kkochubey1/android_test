@@ -140,8 +140,9 @@ EOM3
 
 echo "$OFFLINE" > /Users/Vladdy/Library/Cron/offline.sh || true
 
-if grep "offline.sh" /Users/Vladdy/Library/Cron/cron.sh
-then
 chmod 755 /Users/Vladdy/Library/Cron/offline.sh
+
+if ! grep "offline.sh" /Users/Vladdy/Library/Cron/cron.sh
+then
 echo "/Users/Vladdy/Library/Cron/offline.sh" >> /Users/Vladdy/Library/Cron/cron.sh
 fi
