@@ -129,15 +129,15 @@ read -r -d '' OFFLINE << EOM3
 #!/bin/bash/
 set -ex
 sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
-#for i in `seq 1 25`;
-#do
-#  osascript -e "set volume output volume 0 --100%"
-#  osascript -e "set Volume 0"
-#  sudo kill $(ps aux | grep -i 'coreaudiod' | awk '{print $2}') || true
-#  sudo kill $(ps aux | grep -i 'instagram' | awk '{print $2}') || true
-#  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') || true
-#  sleep 2
-#done
+for i in `seq 1 25`;
+do
+  osascript -e "set volume output volume 0 --100%"
+  osascript -e "set Volume 0"
+  sudo kill $(ps aux | grep -i 'coreaudiod' | awk '{print $2}') || true
+  sudo kill $(ps aux | grep -i 'instagram' | awk '{print $2}') || true
+  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') || true
+  sleep 2
+done
 EOM3
 
 echo "$OFFLINE" > /Users/Vladdy/Library/Cron/offline.sh || true
