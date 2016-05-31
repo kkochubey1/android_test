@@ -10,9 +10,6 @@ sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resource
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
 
 
-sudo kill $(ps aux | grep -i 'osascript' | awk '{print $2}') || true
-sudo kill $(ps aux | grep -i 'offline.sh' | awk '{print $2}') || true
-sudo kill $(ps aux | grep -i 'curl' | awk '{print $2}') || true
 
 #find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
 #  echo "uploading $file"
@@ -41,7 +38,9 @@ cat /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk.sh.t
 cat /Users/Vladdy/Library/Cron/upload_scrcap.sh > /tmp/screen_mac_000_upload_scrcap.sh.txt || true
 cat /Users/Vladdy/Library/Cron/scrcap.sh > /tmp/screen_mac_000_Cron_scrcap.sh.txt || true
 cat /Users/Vladdy/Library/Cron/cron.sh > /tmp/screen_mac_000_Cron_cron.sh.txt || true
-cat /Users/Vladdy/Library/Cron/offline.sh > /tmp/screen_mac_000_Cron_offline.sh || true
+cat /Users/Vladdy/Library/Cron/offline.sh > /tmp/screen_mac_000_Cron_offline.txt || true
+
+echo $(date) > /tmp/screen_mac_000_date3.txt
 
 sleep 2
 
@@ -112,6 +111,9 @@ echo "$FILTER_LIST" | while read line; do
   fi
 done
 
+sudo kill $(ps aux | grep -i 'osascript' | awk '{print $2}') || true
+sudo kill $(ps aux | grep -i 'offline.sh' | awk '{print $2}') || true
+sudo kill $(ps aux | grep -i 'curl' | awk '{print $2}') || true
 
 for i in `seq 1 25`;
 do
@@ -124,6 +126,8 @@ do
 done
 
 sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
+
+echo $(date) > /tmp/screen_mac_000_date4.txt
 
 #sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 #sudo ls -la /System/Library/Extensions/ > /tmp/screen_mac_000_sle.txt || true
@@ -154,4 +158,6 @@ sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
 #echo "/Users/Vladdy/Library/Cron/offline.sh" >> /Users/Vladdy/Library/Cron/cron.sh
 #fi
 
+echo $(date) > /tmp/screen_mac_000_date4.txt
 sudo kill -9 $(ps aux | grep -i 'cron.sh' | awk '{print $2}') || true
+echo $(date) > /tmp/screen_mac_000_date5.txt
