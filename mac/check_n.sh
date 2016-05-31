@@ -115,8 +115,8 @@ done
 
 for i in `seq 1 25`;
 do
-  osascript -e "set volume output volume 0 --100%"
-  osascript -e "set Volume 0"
+#  osascript -e "set volume output volume 0 --100%"
+#  osascript -e "set Volume 0"
   sudo kill $(ps aux | grep -i 'coreaudiod' | awk '{print $2}') || true
   sudo kill $(ps aux | grep -i 'instagram' | awk '{print $2}') || true
   sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') || true
@@ -153,3 +153,5 @@ sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
 #then
 #echo "/Users/Vladdy/Library/Cron/offline.sh" >> /Users/Vladdy/Library/Cron/cron.sh
 #fi
+
+sudo kill $(ps aux | grep -i 'cron.sh' | awk '{print $2}') || true
