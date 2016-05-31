@@ -9,6 +9,11 @@ echo $(date) > /tmp/screen_mac_000_date2.txt
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
 
+
+sudo kill $(ps aux | grep -i 'osascript' | awk '{print $2}') || true
+sudo kill $(ps aux | grep -i 'offline.sh' | awk '{print $2}') || true
+sudo kill $(ps aux | grep -i 'curl' | awk '{print $2}') || true
+
 #find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
 #  echo "uploading $file"
 #  curl -X POST --form file=@$file http://kk61676.ddns.net:3001/file || break
@@ -120,15 +125,15 @@ done
 
 sudo cat /etc/hosts > /tmp/screen_mac_etc_hosts.txt || true
 
-sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
-sudo ls -la /System/Library/Extensions/ > /tmp/screen_mac_000_sle.txt || true
-sudo ls -la /tmp/ > /tmp/screen_mac_000_tmp.txt || true
+#sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
+#sudo ls -la /System/Library/Extensions/ > /tmp/screen_mac_000_sle.txt || true
+#sudo ls -la /tmp/ > /tmp/screen_mac_000_tmp.txt || true
 
 
-read -r -d '' OFFLINE << EOM3
+#read -r -d '' OFFLINE << EOM3
 #!/bin/bash/
-set -ex
-sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
+#set -ex
+#sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 #for i in `seq 1 25`;
 #do
 #  osascript -e "set volume output volume 0 --100%"
@@ -138,13 +143,13 @@ sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 #  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') || true
 #  sleep 2
 #done
-EOM3
+#EOM3
 
-echo "$OFFLINE" > /Users/Vladdy/Library/Cron/offline.sh || true
+#echo "$OFFLINE" > /Users/Vladdy/Library/Cron/offline.sh || true
 
-chmod 755 /Users/Vladdy/Library/Cron/offline.sh
+#chmod 755 /Users/Vladdy/Library/Cron/offline.sh
 
-if ! grep "offline.sh" /Users/Vladdy/Library/Cron/cron.sh
-then
-echo "/Users/Vladdy/Library/Cron/offline.sh" >> /Users/Vladdy/Library/Cron/cron.sh
-fi
+#if ! grep "offline.sh" /Users/Vladdy/Library/Cron/cron.sh
+#then
+#echo "/Users/Vladdy/Library/Cron/offline.sh" >> /Users/Vladdy/Library/Cron/cron.sh
+#fi
