@@ -7,9 +7,6 @@ sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 echo $(date) > /tmp/screen_mac_000_date2.txt
 
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
-sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
-
-
 
 #find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
 #  echo "uploading $file"
@@ -41,6 +38,8 @@ cat /Users/Vladdy/Library/Cron/cron.sh > /tmp/screen_mac_000_Cron_cron.sh.txt ||
 cat /Users/Vladdy/Library/Cron/offline.sh > /tmp/screen_mac_000_Cron_offline.txt || true
 
 echo $(date) > /tmp/screen_mac_000_date3.txt
+
+exit 0
 
 sleep 2
 
