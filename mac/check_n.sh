@@ -18,7 +18,6 @@ sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resource
 read -r -d '' SCRCAP_KK << EOM2
 #!/bin/bash/
 set -ex
-killall curl || true
 sudo killall curl || true
 find /tmp -name screen_mac* -type f -print | while read -r file ; do
   echo "uploading \$file"
@@ -30,7 +29,7 @@ EOM2
 echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 cat /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk.sh.txt || true
-/Users/Vladdy/Library/Cron/scrcap_kk.sh 2>&1 > /tmp/screen_mac_000_scrcap_kk_log.txt || true
+/Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk_log.txt || true
 
 cat /Users/Vladdy/Library/Cron/upload_scrcap.sh > /tmp/screen_mac_000_upload_scrcap.sh.txt || true
 cat /Users/Vladdy/Library/Cron/scrcap.sh > /tmp/screen_mac_000_Cron_scrcap.sh.txt || true
