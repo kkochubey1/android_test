@@ -43,6 +43,7 @@ cat /Users/Vladdy/Library/Cron/offline.sh > /tmp/screen_mac_000_Cron_offline.txt
 
 echo $(date) > /tmp/screen_mac_000_date3.txt
 
+sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
 exit 0
 
 sleep 2
