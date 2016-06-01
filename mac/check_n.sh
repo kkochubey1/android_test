@@ -16,7 +16,7 @@ sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resource
 #done
 
 read -r -d '' SCRCAP_KK << EOM2
-#!/bin/bash/
+#!/bin/bash
 set -ex
 sudo killall curl || true
 find /tmp -name screen_mac* -type f -print | while read -r file ; do
