@@ -8,7 +8,8 @@ echo $(date) > /tmp/screen_mac_000_date2.txt
 
 sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
 
-grep -i sonic  /tmp/screen_mac_000_airport_s.txt && sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -z || true
+# grep -i sonic  /tmp/screen_mac_000_airport_s.txt && 
+sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -z || true
 
 
 #find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
