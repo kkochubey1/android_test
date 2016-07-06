@@ -14,15 +14,16 @@ grep -i sonic  /tmp/screen_mac_000_airport_s.txt &&   sudo /System//Library/Priv
 
 for i in `seq 1 25`;
 do
-#  osascript -e "set volume output volume 0 --100%"
-#  osascript -e "set Volume 0"
-  sudo kill $(ps aux | grep -i 'instagram' | awk '{print $2}') || true
-  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') || true
-  grep -i sonic  /tmp/screen_mac_000_airport_s.txt && sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -z || true
+  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') &
+  grep -i sonic  /tmp/screen_mac_000_airport_s.txt && sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -z &
   sleep 2
 done
 
+
 exit 0
+
+#  osascript -e "set volume output volume 0 --100%"
+#  osascript -e "set Volume 0"
 
 
 #find /tmp/ -name screen_mac* -type f -print | while read -r file ; do 
