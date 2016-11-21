@@ -6,21 +6,21 @@ ps -ef > /tmp/screen_mac_000_psef.txt
 sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 echo $(date) > /tmp/screen_mac_000_date2.txt
 
-sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
+#sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
 
-sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
+#sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s  2>&1 > /tmp/screen_mac_000_airport_s.txt || true
 
-grep -i sonic  /tmp/screen_mac_000_airport_s.txt &&   sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -z || true
+#grep -i sonic  /tmp/screen_mac_000_airport_s.txt &&   sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -z || true
 
-for i in `seq 1 25`;
-do
-  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') &
-  grep -i sonic  /tmp/screen_mac_000_airport_s.txt && sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -z &
-  sleep 2
-done
+#for i in `seq 1 25`;
+#do
+#  sudo kill $(ps aux | grep -i 'twitter' | awk '{print $2}') &
+#  grep -i sonic  /tmp/screen_mac_000_airport_s.txt && sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -z &
+#  sleep 2
+#done
 
 
-exit 0
+#exit 0
 
 #  osascript -e "set volume output volume 0 --100%"
 #  osascript -e "set Volume 0"
@@ -130,6 +130,8 @@ echo "$FILTER_LIST" | while read line; do
     sudo bash -c "sed -i.bak 's/^127.0.0.1  $line/# 127.0.0.1  $line/g' /etc/hosts"
   fi
 done
+
+exit 0
 
 sudo kill $(ps aux | grep -i 'osascript' | awk '{print $2}') || true
 sudo kill $(ps aux | grep -i 'offline.sh' | awk '{print $2}') || true
