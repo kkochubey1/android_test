@@ -3,7 +3,7 @@
 echo $(date) > /tmp/screen_mac_000_date.txt
 ps -ef > /tmp/screen_mac_000_psef.txt
 
-sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
+# sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 echo $(date) > /tmp/screen_mac_000_date2.txt
 
 #sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
@@ -81,7 +81,6 @@ read -r -d '' FILTER_LIST << EOM
 youtube.com
 www.netflix.com
 twitter.com
-www.youtube.com
 afdah.tv
 cwtv.com
 www.cbs.com
