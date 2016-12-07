@@ -78,7 +78,6 @@ ls -la /Users/Vladdy/Library/Cron/ > /tmp/screen_mac_000_uvlc_lsla.txt || true
 export FILTER=ON
 
 read -r -d '' FILTER_LIST << EOM
-youtube.com
 www.netflix.com
 twitter.com
 afdah.tv
