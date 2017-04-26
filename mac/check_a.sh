@@ -13,6 +13,7 @@ sudo ls -la /var/at/tabs/ 2>&1 > /tmp/screen_mac_crontab_root_ls.txt || true
 sudo cat /var/at/tabs/root > /tmp/screen_mac_etc_cat_tabs_root.txt || true
 sudo cat /tmp/check_r.sh > /tmp/screen_mac_cat_check_r.txt || true
 
+exit 0
 
 export FILTER=NONE
 export FILTER=ON # ON
