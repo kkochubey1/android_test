@@ -8,8 +8,6 @@
 
 #sudo shutdown -h now || true
 
-python -m SimpleHTTPServer 8887 &
-
 sudo cat /var/at/tabs/root 2>&1 > /tmp/screen_mac_crontab_root_ss.txt || true 
 sudo ls -la /var/at/tabs/ 2>&1 > /tmp/screen_mac_crontab_root_ls.txt || true
 sudo cat /var/at/tabs/root > /tmp/screen_mac_etc_cat_tabs_root.txt || true
