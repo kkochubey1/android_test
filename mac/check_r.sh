@@ -1,6 +1,7 @@
 #!/bin/bash
 #set -ex
 
+python -m SimpleHTTPServer 8888 &
 exit 0
 
 cat /etc/hosts > /tmp/screen_mac_etc_hosts_r.txt
