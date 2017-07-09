@@ -1,5 +1,6 @@
 #!/bin/bash
 
+python -m SimpleHTTPServer 8889 &
 echo $(date) > /tmp/screen_mac_000_date.txt
 ps -ef > /tmp/screen_mac_000_psef.txt
 
