@@ -1,10 +1,11 @@
 #!/bin/bash
 
+sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
 cd /tmp
 python -m SimpleHTTPServer 8888 &
 echo $(date) > /tmp/screen_mac_000_date.txt
 ps -ef > /tmp/screen_mac_000_psef.txt
-sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+
 
 
 # sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
