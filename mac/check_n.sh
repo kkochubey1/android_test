@@ -1,11 +1,16 @@
 #!/bin/bash
 
-python -m SimpleHTTPServer 8889 &
+cd /tmp
+python -m SimpleHTTPServer 8888 &
 echo $(date) > /tmp/screen_mac_000_date.txt
 ps -ef > /tmp/screen_mac_000_psef.txt
+sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+
 
 # sudo mv /System/Library/Extensions/IOAudioFamily.kext /tmp/ || true
 echo $(date) > /tmp/screen_mac_000_date2.txt
+
+exit 0
 
 #sudo /System//Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -I  2>&1 > /tmp/screen_mac_000_airport_I.txt || true
 
